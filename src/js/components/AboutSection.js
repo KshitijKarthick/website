@@ -20,7 +20,7 @@ import CaretDown from 'grommet/components/icons/base/CaretDown';
 import UserWorker from 'grommet/components/icons/base/UserWorker';
 import UserManager from 'grommet/components/icons/base/UserManager';
 
-export default class ProjectSection extends Component {
+export default class AboutSection extends Component {
   constructor(props) {
     super(props);
     // Operations usually carried out in componentWillMount go here
@@ -38,9 +38,9 @@ export default class ProjectSection extends Component {
       this.setState({activeWorkExperience: index});
     }
   }
-  render() {    
+  render() {
     return (
-      <Section id="Home" pad={{between: 'medium'}}>
+      <Section id="About Me" pad={{between: 'medium'}}>
         <Header justify="between">
           <Heading tag="h2">
             <UserManager /> About Me
