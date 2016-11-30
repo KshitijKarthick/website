@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Card from 'grommet/components/Card';
 import Layer from 'grommet/components/Layer';
-import Title from 'grommet/components/Title';
 import Header from 'grommet/components/Header';
 import Anchor from 'grommet/components/Anchor';
 import Article from 'grommet/components/Article';
@@ -62,12 +61,11 @@ export default class BlogSection extends Component {
     return data.map((article, index) => {
       return (
         <Paragraph key={index} size={size}>{article}</Paragraph>
-      )
+      );
     });
   }
   getBlogHTML() {
     return this.state.blogData.map((article, index) => {
-      var flag = true;
       return (
         <Card size='xxlarge'
         label={article.tag}
@@ -76,7 +74,7 @@ export default class BlogSection extends Component {
           <Paragraph size='small'>{article.creationDate}</Paragraph>
           {this.getParagraphs(article.description, 'medium')}
           <Anchor
-            label='Read full article here.' icon={ <ArticleIcon/ > }
+            label='Read full article here.' icon={<ArticleIcon/ >}
             onClick={this.showArticle.bind({index: index, this: this})}
           />
           <Layer closer={true} hidden={article.hidden} align='left'
