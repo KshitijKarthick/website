@@ -10,9 +10,10 @@ import Title from 'grommet/components/Title';
 import Header from 'grommet/components/Header';
 import Footer from 'grommet/components/Footer';
 import Anchor from 'grommet/components/Anchor';
-import AboutSection from './components/AboutSection';
+import HomeSection from './components/HomeSection';
 import BlogSection from './components/BlogSection';
 import Paragraph from 'grommet/components/Paragraph';
+import AboutSection from './components/AboutSection';
 import ProjectSection from './components/ProjectSection';
 import SocialGithub from 'grommet/components/icons/base/SocialGithub';
 import SocialTwitter from 'grommet/components/icons/base/SocialTwitter';
@@ -26,14 +27,14 @@ class Main extends Component {
           pad={{horizontal: 'medium'}} colorIndex="light-2">
           <Title>Kshitij Karthick</Title>
           <Menu direction="row" align="center" responsive={true}>
-            <Anchor className="active"><Link to="/">Home</Link></Anchor>
-            <Anchor><Link to="/project">Project</Link></Anchor>
-            <Anchor><Link to="/about">About Me</Link></Anchor>
-            <Anchor><Link to="/blog">Blog</Link></Anchor>
+            <Link to="/">Home</Link>
+            <Link to="/project">Project</Link>
+            <Link to="/about">About Me</Link>
+            <Link to="/blog">Blog</Link>
           </Menu>
         </Header>
         <Box pad={{vertical: 'large', horizontal: 'medium', between: 'small'}}>
-          {this.props.children}
+          {this.props.children || <HomeSection />}
         </Box>
         <Footer primary={true} appCentered={true} direction="column"
           align="center" pad="small" colorIndex="grey-1">
@@ -67,8 +68,5 @@ render((
     <Route path="*" component={Main}/>
   </Router>
 ), document.getElementById('content'));
-
-// let element = document.getElementById('content');
-// ReactDOM.render(React.createElement(Main), element);
 
 document.body.classList.remove('loading');
