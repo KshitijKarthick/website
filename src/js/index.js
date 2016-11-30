@@ -1,7 +1,8 @@
 import '../scss/index.scss';
 
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import React, { Component } from 'react';
+import { Router, Route, browserHistory, Link } from 'react-router';
 import Box from 'grommet/components/Box';
 import App from 'grommet/components/App';
 import Menu from 'grommet/components/Menu';
@@ -9,7 +10,8 @@ import Title from 'grommet/components/Title';
 import Header from 'grommet/components/Header';
 import Footer from 'grommet/components/Footer';
 import Anchor from 'grommet/components/Anchor';
-import HomeSection from './components/HomeSection';
+import AboutSection from './components/AboutSection';
+import BlogSection from './components/BlogSection';
 import Paragraph from 'grommet/components/Paragraph';
 import ProjectSection from './components/ProjectSection';
 import SocialGithub from 'grommet/components/icons/base/SocialGithub';
@@ -24,15 +26,14 @@ class Main extends Component {
           pad={{horizontal: 'medium'}} colorIndex="light-2">
           <Title>Kshitij Karthick</Title>
           <Menu direction="row" align="center" responsive={true}>
-            <Anchor href="#" className="active">Home</Anchor>
-            <Anchor href="#Projects">Projects</Anchor>
-            <Anchor href="#">Third</Anchor>
+            <Anchor className="active"><Link to="/">Home</Link></Anchor>
+            <Anchor><Link to="/project">Project</Link></Anchor>
+            <Anchor><Link to="/about">About Me</Link></Anchor>
+            <Anchor><Link to="/blog">Blog</Link></Anchor>
           </Menu>
         </Header>
-        <Box pad={{vertical: 'small'}}/>
         <Box pad={{vertical: 'large', horizontal: 'medium', between: 'small'}}>
-          <HomeSection />
-          <ProjectSection />
+          {this.props.children}
         </Box>
         <Footer primary={true} appCentered={true} direction="column"
           align="center" pad="small" colorIndex="grey-1">
@@ -48,7 +49,7 @@ class Main extends Component {
             } href="https://in.linkedin.com/in/kshitijkarthick" />
             <Anchor align="end" target="_blank" icon={
               <SocialTwitter/ >
-            } href="https://twitter.com/kshitijkarthick" /> 
+            } href="https://twitter.com/kshitijkarthick" />
           </Menu>
         </Footer>
       </App>
@@ -56,7 +57,18 @@ class Main extends Component {
   }
 };
 
-let element = document.getElementById('content');
-ReactDOM.render(React.createElement(Main), element);
+render((
+  <Router history={browserHistory}>
+    <Route path="/" component={Main}>
+      <Route path="about" component={AboutSection}/>
+      <Route path="project" component={ProjectSection}/>
+      <Route path="blog" component={BlogSection}/>
+    </Route>
+    <Route path="*" component={Main}/>
+  </Router>
+), document.getElementById('content'));
+
+// let element = document.getElementById('content');
+// ReactDOM.render(React.createElement(Main), element);
 
 document.body.classList.remove('loading');
