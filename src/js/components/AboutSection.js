@@ -18,17 +18,14 @@ import Steps from 'grommet/components/icons/base/Steps';
 import Title from 'grommet/components/Title';
 import UserWorker from 'grommet/components/icons/base/UserWorker';
 import Value from 'grommet/components/Value';
+import experience from '../data/experience';
 
 export default class AboutSection extends Component {
   constructor(props) {
     super(props);
     // Operations usually carried out in componentWillMount go here
     this.state = {
-      workExperience: [
-        {"label": "Jnaapti", "value": 10, "colorIndex": "graph-1"},
-        {"label": "Indian Institute of Science", "value": 2, "colorIndex": "graph-2"},
-        {"label": "Studeyo", "value": 6, "colorIndex": "graph-3"}
-      ],
+      workExperience: experience.totalExperience,
       activeWorkExperience: 0
     };
   }
@@ -57,8 +54,8 @@ export default class AboutSection extends Component {
                 this.state.activeWorkExperience
               ].value}
               units="Months"
-              label="Total: 18" />}
-              max={18}
+              label="Total: 29" />}
+              max={29}
               onActive={this.setActiveWorkExperience.bind(this)} />
               <Value size="small" value={this.state.workExperience[
                 this.state.activeWorkExperience
