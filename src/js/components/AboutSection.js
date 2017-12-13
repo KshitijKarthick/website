@@ -31,10 +31,11 @@ export default class AboutSection extends Component {
       );
     });
   }
-  buildCompanyExperience(workDetails) {
+  buildCompanyExperience(workDetails, index) {
     return (
-      <Card size="xlarge" label={workDetails.role}
-        heading={workDetails.title}
+      <Card size="xlarge" label={workDetails.title}
+        colorIndex={index % 2 != 0 ? 'light-1' : 'light-2'}
+        heading={workDetails.role}
         description={workDetails.started_at + " - " + workDetails.ended_at}>
         {this.getParagraphs(workDetails.description)}
       </Card>
@@ -42,37 +43,39 @@ export default class AboutSection extends Component {
   }
   buildWorkExperience() {
     return this.state.experienceDescription.map((work, index) => {
-      return <Box key={index} full='horizontal'>{this.buildCompanyExperience(work)}</Box>;
+      return <Box key={index} full='horizontal'>{this.buildCompanyExperience(work, index)}</Box>;
     });
   }
   render() {
     return (
       <Article id="About Me">
         <Section>
-          <Card size="xlarge"
-          label="My Work Experience"
-          heading="Time spent in Class vs Server Room at University?">
-            <Box pad={{between: 'small'}}>
-              <Paragraph size="large">I had over a year of experience by the time I was done with my Bachelors of Engineering working at Two Startups and a Research Institute.</Paragraph>
-              <Paragraph size="large">The learning I had was tremendous both in terms of technical & non technical aspects in the Industry.</Paragraph>
-              <Paragraph size="large">Toiled the rest of the hours either in the server room at my Univeristy or interning at Startups.</Paragraph>
-            </Box>
+          <Box direction="row">
+            <Card size="xlarge"
+            label="My Work Experience"
+            heading="Time spent in Class vs Server Room at University?">
+              <Box pad={{between: 'small'}}>
+                <Paragraph size="large">I had over a year of experience by the time I was done with my Bachelors of Engineering working at Two Startups and a Research Institute.</Paragraph>
+                <Paragraph size="large">The learning I had was tremendous both in terms of technical & non technical aspects in the Industry.</Paragraph>
+                <Paragraph size="large">Toiled the rest of the hours either in the server room at my Univeristy or interning at Startups.</Paragraph>
+              </Box>
+            </Card>
             <Box align="center">
-              <Meter type="circle"
-              stacked={true}
-              series={this.state.workExperience}
-              label={<Value value={this.state.workExperience[
-                this.state.activeWorkExperience
-              ].value}
-              units="Months"
-              label="Total: 29" />}
-              max={29}
-              onActive={this.setActiveWorkExperience.bind(this)} />
-              <Value size="small" value={this.state.workExperience[
-                this.state.activeWorkExperience
-              ].label} />
+                <Meter type="circle"
+                stacked={true}
+                series={this.state.workExperience}
+                label={<Value value={this.state.workExperience[
+                  this.state.activeWorkExperience
+                ].value}
+                units="Months"
+                label="Total: 29" />}
+                max={29}
+                onActive={this.setActiveWorkExperience.bind(this)} />
+                <Value size="small" value={this.state.workExperience[
+                  this.state.activeWorkExperience
+                ].label} />
             </Box>
-          </Card>
+          </Box>
         </Section>
         <Section>
           {this.buildWorkExperience()}
