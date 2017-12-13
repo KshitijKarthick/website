@@ -7,6 +7,7 @@
   "license": "",
   "dependencies": {
     "grommet": "^0.6.9",
+    "ramda": "^0.25.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-router": "^3.0.0"
