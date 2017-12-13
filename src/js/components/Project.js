@@ -98,7 +98,7 @@ export default class Project extends Component {
               }
               />
               <Value align="center" label={"Total Commits: " + this.state.commits.total} />
-            </Box>:<Box flex={true} justify="between" align="center"></Box>
+            </Box>:<Box flex={true} justify="between" align="center" />
             }
           </Box>
         </Card>
