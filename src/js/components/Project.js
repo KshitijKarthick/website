@@ -88,7 +88,7 @@ export default class Project extends Component {
                 size="small"/>
               </Box>
             </Box>
-            <Box flex={true} justify="between" align="center">
+            {this.state.commits?<Box flex={true} justify="between" align="center">
               <Meter type="circle"
               max={this.state.commits.total}
               value={this.state.commits.mine}
@@ -98,7 +98,8 @@ export default class Project extends Component {
               }
               />
               <Value align="center" label={"Total Commits: " + this.state.commits.total} />
-            </Box>
+            </Box>:<Box flex={true} justify="between" align="center"></Box>
+            }
           </Box>
         </Card>
       );
