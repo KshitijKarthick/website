@@ -7,46 +7,14 @@ import Article from 'grommet/components/Article';
 import Section from 'grommet/components/Section';
 import Paragraph from 'grommet/components/Paragraph';
 import ArticleIcon from 'grommet/components/icons/base/Article';
+import blogs from '../data/blogs';
 
 export default class BlogSection extends Component {
   constructor(props) {
     super(props);
     // Operations usually carried out in componentWillMount go here
     this.state = {
-      blogData: [
-        {
-          tag: 'Machine Learning',
-          title: 'Measuring Semantic Relatedness Across Languages',
-          content: [
-            'Provide capability to find semantically related words across languages in a agnostic way.',
-            'Given a word in language 1, you can find semantically related words in language 2.',
-            'The model can be used to obtain a semantic distance measure for words across languages.'
-          ],
-          description: [
-            'Provide capability to find semantically related words across languages in a agnostic way.',
-            'Given a word in language 1, you can find semantically related words in language 2.',
-            'The model can be used to obtain a semantic distance measure for words across languages.'
-          ],
-          creationDate: '27th Jan 2016',
-          hidden: true
-        },
-        {
-          tag: 'Machine Learning',
-          title: 'Measuring Semantic Relatedness Across Languages',
-          content: [
-            'Provide capability to find semantically related words across languages in a agnostic way.',
-            'Given a word in language 1, you can find semantically related words in language 2.',
-            'The model can be used to obtain a semantic distance measure for words across languages.'
-          ],
-          description: [
-            'Provide capability to find semantically related words across languages in a agnostic way.',
-            'Given a word in language 1, you can find semantically related words in language 2.',
-            'The model can be used to obtain a semantic distance measure for words across languages.'
-          ],
-          creationDate: '28th Jan 2015',
-          hidden: true
-        }
-      ]
+      blogData: blogs.blogList
     };
   }
   showArticle(event) {
