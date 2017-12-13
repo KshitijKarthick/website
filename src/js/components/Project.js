@@ -58,35 +58,37 @@ export default class Project extends Component {
     }
     if(this.state.languageDistribution.length > 0) {
       return (
-        <Card size="xxlarge" textAlign={this.state.textAlign} label={this.state.category}
-        heading={this.state.title}>
-          {this.buildDescription()}
-          <Box direction="row">
-            {demo}
-            {github}
-          </Box>
-          <Box direction="row">
-            <Meter type="spiral"
-            series={this.state.languageDistribution}
-            label={false} max={100} threshold={90}
-            size="small" onActive={this.setActiveLanguageDistribution.bind(this)}
-            />
-            <Value
-            value={
-              this.state.languageDistribution[
-                this.state.activeLangDistIndex
-              ].value
-            } 
-            units="%"
-            align="start"
-            label={
-              this.state.languageDistribution[
-                this.state.activeLangDistIndex
-              ].label
-            }
-            size="small"/>
-          </Box>
-        </Card>
+        <Box direction="row" align='center'>
+            <Card size="xxlarge" textAlign={this.state.textAlign} label={this.state.category}
+            heading={this.state.title} full="horizontal">
+              {this.buildDescription()}
+              <Box direction="row">
+                {demo}
+                {github}
+              </Box>
+            </Card>
+            <Box direction="row" pad={{'vertical': 'large'}}>
+              <Meter type="spiral"
+              series={this.state.languageDistribution}
+              label={false} max={100} threshold={90}
+              size="small" onActive={this.setActiveLanguageDistribution.bind(this)}
+              />
+              <Value
+              value={
+                this.state.languageDistribution[
+                  this.state.activeLangDistIndex
+                ].value
+              } 
+              units="%"
+              align="start"
+              label={
+                this.state.languageDistribution[
+                  this.state.activeLangDistIndex
+                ].label
+              }
+              size="small"/>
+            </Box>
+        </Box>
       );
     } else {
       return (
