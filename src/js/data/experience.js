@@ -16,7 +16,7 @@ exports.experienceDescription = [{
   ],
   "started_at": "March 2017",
   "ended_at": "Current",
-  "role": "R&D Scientist"
+  "role": "R & D Scientist"
 }, {
   "title": "Jnaapti",
   "description": [
@@ -36,7 +36,7 @@ exports.experienceDescription = [{
   ],
   "started_at": "September 2015",
   "ended_at": "February 2016",
-  "role": "R&D Scientist"
+  "role": "Intern"
 }, {
   "title": "IISc Project",
   "description": [
