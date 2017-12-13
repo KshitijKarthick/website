@@ -1,22 +1,11 @@
 import React, { Component } from 'react';
 
-import Accordion from 'grommet/components/Accordion';
-import AccordionPanel from 'grommet/components/AccordionPanel';
-import Animate from 'grommet/components/Animate';
 import Article from 'grommet/components/Article';
-import Book from 'grommet/components/icons/base/Book';
 import Box from 'grommet/components/Box';
 import Card from 'grommet/components/Card';
-import CaretDown from 'grommet/components/icons/base/CaretDown';
-import Headline from 'grommet/components/Headline';
-import Map from 'grommet/components/Map';
 import Meter from 'grommet/components/Meter';
 import Paragraph from 'grommet/components/Paragraph';
 import Section from 'grommet/components/Section';
-import ShopCart from 'grommet/components/icons/base/ShopCart';
-import Steps from 'grommet/components/icons/base/Steps';
-import Title from 'grommet/components/Title';
-import UserWorker from 'grommet/components/icons/base/UserWorker';
 import Value from 'grommet/components/Value';
 import experience from '../data/experience';
 
@@ -26,13 +15,35 @@ export default class AboutSection extends Component {
     // Operations usually carried out in componentWillMount go here
     this.state = {
       workExperience: experience.totalExperience,
-      activeWorkExperience: 0
+      activeWorkExperience: 0,
+      experienceDescription: experience.experienceDescription
     };
   }
   setActiveWorkExperience(index) {
     if(index !== null && index !== undefined) {
       this.setState({activeWorkExperience: index});
     }
+  }
+  getParagraphs(data) {
+    return data.map((article, index) => {
+      return (
+        <Paragraph key={index} size="large">{article}</Paragraph>
+      );
+    });
+  }
+  buildCompanyExperience(workDetails) {
+    return (
+      <Card size="xlarge" label={workDetails.role}
+        heading={workDetails.title}
+        description={workDetails.started_at + " - " + workDetails.ended_at}>
+        {this.getParagraphs(workDetails.description)}
+      </Card>
+    );
+  }
+  buildWorkExperience() {
+    return this.state.experienceDescription.map((work, index) => {
+      return <Box key={index} full='horizontal'>{this.buildCompanyExperience(work)}</Box>;
+    });
   }
   render() {
     return (
@@ -61,71 +72,10 @@ export default class AboutSection extends Component {
                 this.state.activeWorkExperience
               ].label} />
             </Box>
-            <Box pad={{vertical: 'medium', between: 'medium'}}>
-              <Headline size="small">More Details <CaretDown /></Headline>
-              <Accordion>
-                <AccordionPanel heading={<Title>Timeline <Steps /></Title>}>
-                  <Animate enter={{"animation": "fade", "duration": 1000}} leave={{"animation": "fade", "duration": 1000}} visible={true}>
-                    <Box align="center">
-                      <Map data={{
-                        "categories": [
-                          {
-                            "id": "category-1",
-                            "label": "Timeline",
-                            "items": [
-                              {"id": "item-1-1", "node": "Engineering 3rd Year"},
-                              {"id": "item-1-2", "node": "Engineering 4th Year"},
-                              {"id": "item-1-3", "node": "Work"}
-                            ]
-                          },
-                          {
-                            "id": "category-2",
-                            "label": "Startup",
-                            "items": [
-                              {"id": "item-2-1", "node": "Jnaapti"},
-                              {"id": "item-2-2", "node": "Studeyo"}
-                            ]
-                          },
-                          {
-                            "id": "category-3",
-                            "label": "Research Institute",
-                            "items": [
-                              {"id": "item-3-1", "node": "Indian Institute of Science"}
-                            ]
-                          }
-                        ],
-                        "links": [
-                          {"parentId": "item-1-1", "childId": "item-2-1"},
-                          {"parentId": "item-1-2", "childId": "item-3-1"},
-                          {"parentId": "item-1-2", "childId": "item-2-1"},
-                          {"parentId": "item-1-2", "childId": "item-2-2"},
-                          {"parentId": "item-1-3", "childId": "item-2-1"}
-                        ]
-                      }} vertical={false} />
-                    </Box>
-                  </Animate>
-                </AccordionPanel>
-                <AccordionPanel heading={<Title>Jnaapti <UserWorker /></Title>}>
-                  <Animate enter={{"animation": "fade", "duration": 1000}} leave={{"animation": "fade", "duration": 1000}} visible={true}>
-                    <Paragraph>Working on Generating usable Metrics/Insights for Learners utilising the Training/Assessment Platform VirtualCoach</Paragraph>
-                    <Paragraph>To Bring Zim Wiki (a Desktop Wiki Application) over to the Web.</Paragraph>
-                  </Animate>
-                </AccordionPanel>
-                <AccordionPanel heading={<Title>Indian Institute of Science <Book /></Title>}>
-                  <Animate enter={{"animation": "fade", "duration": 1000}} leave={{"animation": "fade", "duration": 1000}} visible={true}>
-                    <Paragraph>Implementing a Trsl (tree based statistical language) model in Python for supporting the acoustic model by prediction of the next word.</Paragraph>
-                    <Paragraph>Under the guidance of Dr. Thippur V. Sreenivas, ECE department, mentored by Kiran Subbaraman.</Paragraph>
-                  </Animate>
-                </AccordionPanel>
-                <AccordionPanel heading={<Title>Studeyo <ShopCart /></Title>}>
-                  <Animate enter={{"animation": "fade", "duration": 1000}} leave={{"animation": "fade", "duration": 1000}} visible={true}>
-                    <Paragraph>Working on a contextual advertising and product discovery platform.</Paragraph>
-                    <Paragraph>Currently focused on working out product relatedness and semantic context of the content being monetized.</Paragraph>
-                  </Animate>
-                </AccordionPanel>
-              </Accordion>
-            </Box>
           </Card>
+        </Section>
+        <Section>
+          {this.buildWorkExperience()}
         </Section>
       </Article>
     );
