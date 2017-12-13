@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+
+import Anchor from 'grommet/components/Anchor';
 import Box from 'grommet/components/Box';
 import Card from 'grommet/components/Card';
-import Meter from 'grommet/components/Meter';
-import Value from 'grommet/components/Value';
-import Anchor from 'grommet/components/Anchor';
-import Paragraph from 'grommet/components/Paragraph';
 import Deployment from 'grommet/components/icons/base/Deployment';
+import Meter from 'grommet/components/Meter';
+import Paragraph from 'grommet/components/Paragraph';
 import SocialGithub from 'grommet/components/icons/base/SocialGithub';
+import Value from 'grommet/components/Value';
 
 export default class Project extends Component {
   constructor(props) {
@@ -65,41 +66,25 @@ export default class Project extends Component {
             {github}
           </Box>
           <Box direction="row">
-            <Box flex={true} justify="between" align="center" pad={{"between": "medium"}} >
-              <Box direction="row" align="center" pad={{"between": "small"}}>
-                <Meter type="spiral"
-                series={this.state.languageDistribution}
-                label={false} max={100} threshold={90}
-                size="small" onActive={this.setActiveLanguageDistribution.bind(this)}
-                />
-                <Value
-                value={
-                  this.state.languageDistribution[
-                    this.state.activeLangDistIndex
-                  ].value
-                } 
-                units="%"
-                align="start"
-                label={
-                  this.state.languageDistribution[
-                    this.state.activeLangDistIndex
-                  ].label
-                }
-                size="small"/>
-              </Box>
-            </Box>
-            {this.state.commits?<Box flex={true} justify="between" align="center">
-              <Meter type="circle"
-              max={this.state.commits.total}
-              value={this.state.commits.mine}
-              label={<Value size="small"
-                value={this.state.commits.mine}
-                units="Commits"/>
-              }
-              />
-              <Value align="center" label={"Total Commits: " + this.state.commits.total} />
-            </Box>:<Box flex={true} justify="between" align="center" />
+            <Meter type="spiral"
+            series={this.state.languageDistribution}
+            label={false} max={100} threshold={90}
+            size="small" onActive={this.setActiveLanguageDistribution.bind(this)}
+            />
+            <Value
+            value={
+              this.state.languageDistribution[
+                this.state.activeLangDistIndex
+              ].value
+            } 
+            units="%"
+            align="start"
+            label={
+              this.state.languageDistribution[
+                this.state.activeLangDistIndex
+              ].label
             }
+            size="small"/>
           </Box>
         </Card>
       );
