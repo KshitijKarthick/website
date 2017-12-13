@@ -1,57 +1,62 @@
 import '../scss/index.scss';
 
-import { render } from 'react-dom';
+import { Link, Route, Router, browserHistory } from 'react-router';
 import React, { Component } from 'react';
-import { Router, Route, browserHistory, Link } from 'react-router';
-import Box from 'grommet/components/Box';
-import App from 'grommet/components/App';
-import Menu from 'grommet/components/Menu';
-import Title from 'grommet/components/Title';
-import Header from 'grommet/components/Header';
-import Footer from 'grommet/components/Footer';
-import Anchor from 'grommet/components/Anchor';
-import HomeSection from './components/HomeSection';
-import BlogSection from './components/BlogSection';
-import Paragraph from 'grommet/components/Paragraph';
+
 import AboutSection from './components/AboutSection';
+import Anchor from 'grommet/components/Anchor';
+import App from 'grommet/components/App';
+import BlogSection from './components/BlogSection';
+import Box from 'grommet/components/Box';
+import Footer from 'grommet/components/Footer';
+import Header from 'grommet/components/Header';
+import HomeSection from './components/HomeSection';
+import Menu from 'grommet/components/Menu';
+import Paragraph from 'grommet/components/Paragraph';
 import ProjectSection from './components/ProjectSection';
 import SocialGithub from 'grommet/components/icons/base/SocialGithub';
-import SocialTwitter from 'grommet/components/icons/base/SocialTwitter';
 import SocialLinkedin from 'grommet/components/icons/base/SocialLinkedin';
+import SocialTwitter from 'grommet/components/icons/base/SocialTwitter';
+import Title from 'grommet/components/Title';
+import { render } from 'react-dom';
 
 class Main extends Component {
   render () {
     return (
       <App centered={false}>
-        <Header direction="row" justify="between" size="small" fixed={true}
+        <Header direction="row" fixed={true} justify="between" size="medium"
           pad={{horizontal: 'medium'}} colorIndex="light-2">
           <Title>Kshitij Karthick</Title>
           <Menu direction="row" align="center" responsive={true}>
             <Link to="/">Home</Link>
-            <Link to="/project">Project</Link>
+            <Link to="/project">Projects</Link>
             <Link to="/about">About Me</Link>
-            <Link to="/blog">Blog</Link>
+            <Link to="/blog">Blog Articles</Link>
           </Menu>
         </Header>
-        <Box pad={{vertical: 'large', horizontal: 'medium', between: 'small'}}>
-          {this.props.children || <HomeSection />}
-        </Box>
-        <Footer primary={true} appCentered={true} direction="column"
-          align="center" pad="small" colorIndex="grey-1">
-          <Paragraph align='center'>
-            Built by Kshitij Karthick, Copyright 2016
-          </Paragraph>
-          <Menu direction="row" responsive={false}>
-            <Anchor align="end" target="_blank" icon={
-              <SocialGithub/ >
-            } href="https://github.com/kshitijkarthick" />
-            <Anchor align="end" target="_blank" icon={
-              <SocialLinkedin/ >
-            } href="https://in.linkedin.com/in/kshitijkarthick" />
-            <Anchor align="end" target="_blank" icon={
-              <SocialTwitter/ >
-            } href="https://twitter.com/kshitijkarthick" />
-          </Menu>
+        {this.props.children || <HomeSection />}
+        <Footer justify='between'
+          size='medium' colorIndex="light-2">
+          <Box direction='row'
+            align='center'
+            pad={{"between": "medium"}}>
+            <Paragraph margin='none' size='medium'>
+              Built by Kshitij Karthick © 2016
+            </Paragraph>
+            <Menu direction='row'
+              size='small'
+              dropAlign={{"right": "right"}}>
+              <Anchor target="_blank" icon={
+                <SocialGithub/ >
+              } href="https://github.com/kshitijkarthick" />
+              <Anchor target="_blank" icon={
+                <SocialLinkedin/ >
+              } href="https://in.linkedin.com/in/kshitijkarthick" />
+              <Anchor target="_blank" icon={
+                <SocialTwitter/ >
+              } href="https://twitter.com/kshitijkarthick" />
+            </Menu>
+          </Box>
         </Footer>
       </App>
     );
