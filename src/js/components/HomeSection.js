@@ -7,6 +7,7 @@ import Distribution from 'grommet/components/Distribution';
 import Heading from 'grommet/components/Heading';
 import Paragraph from 'grommet/components/Paragraph';
 import Section from 'grommet/components/Section';
+import interests from '../data/interests';
 
 export default class HomeSection extends Component {
   constructor(props) {
@@ -14,20 +15,11 @@ export default class HomeSection extends Component {
     // Operations usually carried out in componentWillMount go here
   }
   interestDistributionData() {
-    return [
-      {"label": "Machine Learning / Deep Learning", "value": 30},
-      {"label": "Data Science & Analytics", "value": 20, "colorIndex": "accent-2"},
-      {"label": "Web Development", "value": 20, "colorIndex": "unset"},
-      {"label": "Functional Programming", "value": 15},
-      {"label": "Visualizations", "value": 15},
-      {"label": "Reading Novels", "value": 10},
-      {"label": "Music", "value": 20, "colorIndex": "accent-1"},
-      {"label": "FOSS", "value": 15, "colorIndex": "accent-4"}     
-    ];
+    return interests.interestDistributionData;  
   }
   render() {
     return (
-      <Article scrollStep={true}>
+      <Article scrollStep={false}>
         <Section pad='large'
           justify='center'
           align='center'
