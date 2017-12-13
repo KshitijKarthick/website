@@ -3,14 +3,10 @@ import React, { Component } from 'react';
 import Anchor from 'grommet/components/Anchor';
 import Article from 'grommet/components/Article';
 import Box from 'grommet/components/Box';
-import Header from 'grommet/components/Header';
-import Menu from 'grommet/components/Menu';
+import Heading from 'grommet/components/Heading';
 import Project from './Project';
 import R from 'ramda';
 import Section from 'grommet/components/Section';
-import Sidebar from 'grommet/components/Sidebar';
-import Split from 'grommet/components/Split';
-import Title from 'grommet/components/Title';
 import projects from '../data/projects';
 
 export default class ProjectSection extends Component {
@@ -32,26 +28,22 @@ export default class ProjectSection extends Component {
     var categories = this.getSortedCategories();
     var getAnchorForCategories = categories.map((category, index) => {
       return (
-        <Anchor key={index}>
-            {category}
-        </Anchor>
+        <Box key={index}>
+          <Anchor key={index}>
+              {category}
+          </Anchor>
+        </Box>
       );
     });
-    return (<Sidebar
-      full={true}>
-      <Header pad='medium'
-        justify='between'>
-        <Title>
-          Categories
-        </Title>
-      </Header>
-      <Box flex='grow'
-        justify='start'>
-        <Menu primary={true}>
-          {getAnchorForCategories}
-        </Menu>
-      </Box>
-    </Sidebar>);
+    return (
+      <Box direction="row" size="large" pad={{'between': 'small'}}>
+        <Box>
+          <Heading tag="h4" align="start" strong={true}>
+            Categories:
+          </Heading>
+        </Box>
+        {getAnchorForCategories}
+      </Box>);
   }
   getProjects() {
     var groupByCategories = R.groupBy(R.prop('category'));
@@ -84,20 +76,18 @@ export default class ProjectSection extends Component {
   }
   render() {
     return (
-      <Article pad={{between: 'small'}}>
-        <Split priority='left' fixed={false} flex='left'>
+      <Article>
+        <Section>
           <Box
-            justify='center'
-            size='large'
-            align='center'>
+            margin='small'
+            align='start'>
+            {this.getCategorySidebar()}
+          </Box>
+          <Box
+            justify='center'>
               {this.getProjects()}
           </Box>
-          <Box
-            justify='center'
-            align='center'>
-              <Box>{this.getCategorySidebar()}</Box>
-          </Box>
-        </Split>
+        </Section>
       </Article>
     );
   }
