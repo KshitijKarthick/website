@@ -7,6 +7,8 @@ import Heading from 'grommet/components/Heading';
 import Project from './Project';
 import R from 'ramda';
 import Section from 'grommet/components/Section';
+import Tile from 'grommet/components/Tile';
+import Tiles from 'grommet/components/Tiles';
 import projects from '../data/projects';
 
 export default class ProjectSection extends Component {
@@ -14,7 +16,8 @@ export default class ProjectSection extends Component {
     super(props);
     // Operations usually carried out in componentWillMount go here
     this.state = {
-      projectData: projects.projectList
+      projectData: projects.projectList,
+      filterCategories: new Set(R.pluck('category', projects.projectList))
     };
   }
   getSortedCategories() {
@@ -24,32 +27,48 @@ export default class ProjectSection extends Component {
     );
     return sortedCategories;
   }
+  filterCategory(category) {
+    console.log('Filtering Category', category);
+    if(category === 'All') {
+      this.setState({
+        'filterCategories': new Set(this.getSortedCategories())
+      });
+    } else {
+      this.setState({
+        'filterCategories': new Set([category])
+      });
+    }
+  }
   getCategorySidebar() {
-    var categories = this.getSortedCategories();
-    var getAnchorForCategories = categories.map((category, index) => {
+    let categories = ["All"].concat(this.getSortedCategories());
+    let getAnchorForCategories = categories.map((category, index) => {
+      let filterCategory = this.filterCategory.bind(this, category);
       return (
-        <Box key={index}>
-          <Anchor key={index}>
+        <Tile key={index}>
+          <Anchor key={index} onClick={filterCategory}>
               {category}
           </Anchor>
-        </Box>
+        </Tile>
       );
     });
     return (
-      <Box direction="row" size="large" pad={{'between': 'small'}}>
-        <Box>
+      <Tiles fill={true}>
+        <Tile>
           <Heading tag="h4" align="start" strong={true}>
             Categories:
           </Heading>
-        </Box>
+        </Tile>
         {getAnchorForCategories}
-      </Box>);
+      </Tiles>);
   }
   getProjects() {
-    var groupByCategories = R.groupBy(R.prop('category'));
-    var sortedCategories = this.getSortedCategories();
-    var categoryBasedProjects = groupByCategories(this.state.projectData);
-    var getProject = ((project, index) => {
+    let groupByCategories = R.groupBy(R.prop('category'));
+    let sortedCategories = this.getSortedCategories();
+    let filteredCategories = sortedCategories.filter((data) => {
+      return this.state.filterCategories.has(data);
+    });
+    let categoryBasedProjects = groupByCategories(this.state.projectData);
+    let getProject = ((project, index) => {
       return (
         <Project
           id={project.category}
@@ -65,14 +84,14 @@ export default class ProjectSection extends Component {
         />
       );
     });
-    var getCategoryBasedProjectList = ((category, index) => {
+    let getCategoryBasedProjectList = ((category, index) => {
       return (
         <Section key={category}>
           {categoryBasedProjects[category].map(getProject)}
         </Section>
       );
     });
-    return sortedCategories.map(getCategoryBasedProjectList);
+    return filteredCategories.map(getCategoryBasedProjectList);
   }
   render() {
     return (
