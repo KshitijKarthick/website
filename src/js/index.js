@@ -24,7 +24,7 @@ class Main extends Component {
   render () {
     return (
       <App centered={false}>
-        <Header direction="row" fixed={true} justify="between" size="medium"
+        <Header direction="row" justify="between" size="medium"
           pad={{horizontal: 'medium'}} colorIndex="light-2">
           <Title>Kshitij Karthick</Title>
           <Menu direction="row" align="center" responsive={true}>
@@ -36,7 +36,7 @@ class Main extends Component {
         </Header>
         {this.props.children || <HomeSection />}
         <Footer justify='between'
-          size='medium' colorIndex="light-2">
+          size='medium' colorIndex="light-2" fixed={true}>
           <Box direction='row'
             align='center'
             pad={{"between": "medium"}}>
