@@ -6,6 +6,8 @@ import Card from 'grommet/components/Card';
 import Meter from 'grommet/components/Meter';
 import Paragraph from 'grommet/components/Paragraph';
 import Section from 'grommet/components/Section';
+import Tile from 'grommet/components/Tile';
+import Tiles from 'grommet/components/Tiles';
 import Value from 'grommet/components/Value';
 import experience from '../data/experience';
 
@@ -50,17 +52,19 @@ export default class AboutSection extends Component {
     return (
       <Article id="About Me">
         <Section>
-          <Box direction="row">
-            <Card size="xlarge"
-            label="My Work Experience"
-            heading="Time spent in Class vs Server Room at University?">
-              <Box pad={{between: 'small'}}>
-                <Paragraph size="large">I had over a year of experience by the time I was done with my Bachelors of Engineering working at Two Startups and a Research Institute.</Paragraph>
-                <Paragraph size="large">The learning I had was tremendous both in terms of technical & non technical aspects in the Industry.</Paragraph>
-                <Paragraph size="large">Toiled the rest of the hours either in the server room at my Univeristy or interning at Startups.</Paragraph>
-              </Box>
-            </Card>
-            <Box align="center">
+          <Tiles fill={true} flush={true}>
+            <Tile size="large" align="start">
+              <Card size="xlarge"
+              label="My Work Experience"
+              heading="Time spent in Class vs Server Room at University?">
+                <Box pad={{between: 'small'}}>
+                  <Paragraph size="large">I had over a year of experience by the time I was done with my Bachelors of Engineering working at Two Startups and a Research Institute.</Paragraph>
+                  <Paragraph size="large">The learning I had was tremendous both in terms of technical & non technical aspects in the Industry.</Paragraph>
+                  <Paragraph size="large">Toiled the rest of the hours either in the server room at my Univeristy or interning at Startups.</Paragraph>
+                </Box>
+              </Card>
+            </Tile>
+            <Tile pad={{'vertical': 'large'}}>
                 <Meter type="circle"
                 stacked={true}
                 series={this.state.workExperience}
@@ -74,8 +78,8 @@ export default class AboutSection extends Component {
                 <Value size="small" value={this.state.workExperience[
                   this.state.activeWorkExperience
                 ].label} />
-            </Box>
-          </Box>
+            </Tile>
+          </Tiles>
         </Section>
         <Section>
           {this.buildWorkExperience()}
