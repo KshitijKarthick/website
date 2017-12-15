@@ -17,6 +17,8 @@ import ProjectSection from './components/ProjectSection';
 import SocialGithub from 'grommet/components/icons/base/SocialGithub';
 import SocialLinkedin from 'grommet/components/icons/base/SocialLinkedin';
 import SocialTwitter from 'grommet/components/icons/base/SocialTwitter';
+import Tile from 'grommet/components/Tile';
+import Tiles from 'grommet/components/Tiles';
 import Title from 'grommet/components/Title';
 import { render } from 'react-dom';
 
@@ -35,28 +37,25 @@ class Main extends Component {
           </Menu>
         </Header>
         {this.props.children || <HomeSection />}
-        <Footer justify='between'
+        <Footer justify=''
           size='medium' colorIndex="light-2" fixed={true}>
-          <Box direction='row'
-            align='center'
-            pad={{"between": "medium"}}>
-            <Paragraph margin='none' size='medium'>
-              Built by Kshitij Karthick © 2016
-            </Paragraph>
-            <Menu direction='row'
-              size='small'
-              dropAlign={{"right": "right"}}>
-              <Anchor target="_blank" icon={
-                <SocialGithub/ >
-              } href="https://github.com/kshitijkarthick" />
-              <Anchor target="_blank" icon={
-                <SocialLinkedin/ >
-              } href="https://in.linkedin.com/in/kshitijkarthick" />
-              <Anchor target="_blank" icon={
-                <SocialTwitter/ >
-              } href="https://twitter.com/kshitijkarthick" />
-            </Menu>
-          </Box>
+            <Tiles fill={true} flush={true}>
+              <Tile size="small">
+                <Anchor target="_blank" icon={
+                  <SocialGithub/ >
+                } href="https://github.com/kshitijkarthick" />
+              </Tile>
+              <Tile size="small">
+                <Anchor target="_blank" icon={
+                  <SocialLinkedin/ >
+                } href="https://in.linkedin.com/in/kshitijkarthick" />
+              </Tile>
+              <Tile size="small">
+                <Anchor target="_blank" icon={
+                  <SocialTwitter/ >
+                } href="https://twitter.com/kshitijkarthick" />
+              </Tile>
+            </Tiles>
         </Footer>
       </App>
     );
