@@ -7,12 +7,10 @@ import AboutSection from './components/AboutSection';
 import Anchor from 'grommet/components/Anchor';
 import App from 'grommet/components/App';
 import BlogSection from './components/BlogSection';
-import Box from 'grommet/components/Box';
 import Footer from 'grommet/components/Footer';
 import Header from 'grommet/components/Header';
 import HomeSection from './components/HomeSection';
 import Menu from 'grommet/components/Menu';
-import Paragraph from 'grommet/components/Paragraph';
 import ProjectSection from './components/ProjectSection';
 import SocialGithub from 'grommet/components/icons/base/SocialGithub';
 import SocialLinkedin from 'grommet/components/icons/base/SocialLinkedin';
@@ -37,7 +35,7 @@ class Main extends Component {
           </Menu>
         </Header>
         {this.props.children || <HomeSection />}
-        <Footer justify=''
+        <Footer justify='center'
           size='medium' colorIndex="light-2" fixed={true}>
             <Tiles fill={true} flush={true}>
               <Tile size="small">
