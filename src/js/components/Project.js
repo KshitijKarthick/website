@@ -7,6 +7,8 @@ import Deployment from 'grommet/components/icons/base/Deployment';
 import Meter from 'grommet/components/Meter';
 import Paragraph from 'grommet/components/Paragraph';
 import SocialGithub from 'grommet/components/icons/base/SocialGithub';
+import Tile from 'grommet/components/Tile';
+import Tiles from 'grommet/components/Tiles';
 import Value from 'grommet/components/Value';
 
 export default class Project extends Component {
@@ -58,7 +60,8 @@ export default class Project extends Component {
     }
     if(this.state.languageDistribution.length > 0) {
       return (
-        <Box direction="row" align='center'>
+        <Tiles fill={true} flush={true}>
+          <Tile size="large" align="start">
             <Card size="xxlarge" textAlign={this.state.textAlign} label={this.state.category}
             heading={this.state.title} full="horizontal">
               {this.buildDescription()}
@@ -67,6 +70,8 @@ export default class Project extends Component {
                 {github}
               </Box>
             </Card>
+          </Tile>
+          <Tile basis="1/4">
             <Box direction="row" pad={{'vertical': 'large'}}>
               <Meter type="spiral"
               series={this.state.languageDistribution}
@@ -88,7 +93,8 @@ export default class Project extends Component {
               }
               size="small"/>
             </Box>
-        </Box>
+          </Tile>
+        </Tiles>
       );
     } else {
       return (
