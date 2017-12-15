@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import Card from 'grommet/components/Card';
-import Layer from 'grommet/components/Layer';
-import Header from 'grommet/components/Header';
+
 import Anchor from 'grommet/components/Anchor';
 import Article from 'grommet/components/Article';
-import Section from 'grommet/components/Section';
-import Paragraph from 'grommet/components/Paragraph';
 import ArticleIcon from 'grommet/components/icons/base/Article';
+import Card from 'grommet/components/Card';
+import Header from 'grommet/components/Header';
+import Layer from 'grommet/components/Layer';
+import Markdown from 'grommet/components/Markdown';
+import Paragraph from 'grommet/components/Paragraph';
+import Section from 'grommet/components/Section';
 import blogs from '../data/blogs';
 
 export default class BlogSection extends Component {
@@ -43,12 +45,12 @@ export default class BlogSection extends Component {
               label='Read full article here.' icon={<ArticleIcon/ >}
               onClick={this.showArticle.bind({index: index, this: this})}
             />
-            <Layer closer={true} hidden={article.hidden} align='left'
+            <Layer closer={true} hidden={article.hidden} align='center'
               onClose={this.showArticle.bind({index: index, this: this})}>
               <Article>
                 <Section>
                   <Header tag='h3'>{article.title}</Header>
-                  {this.getParagraphs(article.content, 'small')}
+                  {<Markdown content={article.description.join("\n\n")} />}
                 </Section>
               </Article>
             </Layer>
