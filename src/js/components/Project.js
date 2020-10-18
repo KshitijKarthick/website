@@ -50,12 +50,12 @@ export default class Project extends Component {
     );
     if(this.state.demo !== null) {
       demo=(<Anchor align="end" target="_blank" icon={
-        <Deployment></Deployment>
+        <Deployment />
       } href={this.state.demo} />);
     } 
     if(this.state.github !== null) {
       github=(<Anchor align="end" target="_blank" icon={
-        <SocialGithub></SocialGithub>
+        <SocialGithub />
       } href={this.state.github} />);
     }
     if(this.state.languageDistribution.length > 0) {

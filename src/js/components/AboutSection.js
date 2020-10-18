@@ -27,7 +27,7 @@ export default class AboutSection extends Component {
     }
   }
   getTotalExperience() {
-    return this.state.workExperience.map(_ => _['value']).reduce((a, b) => a + b);
+    return this.state.workExperience.map(_ => _.value).reduce((a, b) => a + b);
   }
   getParagraphs(data) {
     return data.map((article, index) => {

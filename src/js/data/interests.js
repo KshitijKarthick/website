@@ -5,7 +5,7 @@ exports.interestDistributionData = [
     {"label": "Functional Programming", "value": 10, "labelValue": ""},
     {"label": "Reading Novels", "value": 10, "labelValue": ""},
     {"label": "Music", "value": 15, "colorIndex": "accent-1", "labelValue": ""},
-    {"label": "Movies", "value": 10, "colorIndex": "accent-1", "labelValue": ""},
+    {"label": "Movies", "value": 10, "colorIndex": "accent-1", "labelValue": ""}
 ];
 
 exports.skillsDistributionData = [
@@ -31,5 +31,5 @@ exports.skillsDistributionData = [
     {"label": "Docker", "value": 10, "colorIndex": "graph-3", "labelValue": ""},
     {"label": "Kubernetes", "value": 10, "colorIndex": "graph-3", "labelValue": ""},
     {"label": "MongoDB", "value": 5, "colorIndex": "graph-3", "labelValue": ""},
-    {"label": "Redis", "value": 5, "colorIndex": "graph-3", "labelValue": ""},
+    {"label": "Redis", "value": 5, "colorIndex": "graph-3", "labelValue": ""}
 ];

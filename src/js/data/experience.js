@@ -14,7 +14,7 @@ exports.experienceDescription = [{
     " functions.",
     "Article Sales forecasting modelling developments.",
     "Built a Spark data pipeline processing 100 gb of data weekly for generating the" +
-    " training data needed for modelling Article Sales forecasting.",
+    " training data needed for modelling Article Sales forecasting."
   ],
   "started_at": "June 2018",
   "ended_at": "Current",

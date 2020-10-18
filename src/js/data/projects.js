@@ -15,7 +15,7 @@ exports.projectList = [{
     {"label": "VueJS", "value": 10},
     {"label": "Vuetify", "value": 10},
     {"label": "FastAPI", "value": 10},
-    {"label": "Redis", "value": 5},
+    {"label": "Redis", "value": 5}
   ],
   github: null,
   demo: "https://projpg.kshitij.cc"
@@ -35,7 +35,7 @@ exports.projectList = [{
     {"label": "FastAi", "value": 20},
     {"label": "VueJS", "value": 15},
     {"label": "Pandas", "value": 10},
-    {"label": "D3", "value": 5},
+    {"label": "D3", "value": 5}
   ],
   github: "https://github.com/KshitijKarthick/animewreck",
   demo: "https://animewreck.kshitij.cc"
