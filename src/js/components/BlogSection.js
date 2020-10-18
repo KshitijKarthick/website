@@ -42,7 +42,7 @@ export default class BlogSection extends Component {
             <Paragraph size='small'>{article.creationDate}</Paragraph>
             {this.getParagraphs(article.description, 'large')}
             <Anchor
-              label='Read full article here.' icon={<ArticleIcon/ >}
+                label='Read full article here.' icon={<ArticleIcon></ArticleIcon>}
               onClick={this.showArticle.bind({index: index, this: this})}
             />
             <Layer closer={true} hidden={article.hidden} align='center'

@@ -28,7 +28,7 @@ export default class HomeSection extends Component {
             label="About Me"
             heading="Curiosity kills the cat, well everything seems fine so far.">
             <Box pad={{between: 'small'}}>
-              <Paragraph size="large">I love tinkering and building Software Applications with over 20 Open Source Projects.</Paragraph>
+              <Paragraph size="large">I love tinkering and building Software Applications with 20 Open Source projects and over 4 years of Professional experience.</Paragraph>
               <Paragraph size="large">A Machine Learning / Deep Learning enthusiast with a publication and multiple projects in the field.</Paragraph>
               <Paragraph size="large">Worked at 1 MNC, 3 startups (2 Internships, 2 Profession Work), 1 during the idea conception stage.</Paragraph>
               <Paragraph size="large">Currently living in Berlin, working as a Applied Scientist in Zalando SE.</Paragraph>
