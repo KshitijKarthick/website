@@ -21,7 +21,7 @@ export default class ProjectSection extends Component {
     };
   }
   getSortedCategories() {
-    var sortCategories = R.sortWith([R.ascend(R.prop('category'))]);
+    var sortCategories = R.sortWith([R.ascend(R.prop('sortedId'))]);
     var sortedCategories = R.uniq(
       R.pluck('category')(sortCategories(this.state.projectData))
     );
@@ -97,11 +97,11 @@ export default class ProjectSection extends Component {
     return (
       <Article>
         <Section>
-          <Box
-            margin='small'
-            align='start'>
-            {this.getCategorySidebar()}
-          </Box>
+          {/*<Box*/}
+          {/*  margin='small'*/}
+          {/*  align='start'>*/}
+          {/*  {this.getCategorySidebar()}*/}
+          {/*</Box>*/}
           <Box
             justify='center'>
               {this.getProjects()}
