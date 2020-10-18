@@ -1,4 +1,5 @@
 exports.totalExperience = [
+  {"label": "Zalando", value: 28, "colorIndex": "accent-2"},
   {"label": "Racetrack.ai", "value": 10, "colorIndex": "neutral-1"},
   {"label": "Jnaapti", "value": 8, "colorIndex": "neutral-2"},
   {"label": "IISc Project", "value": 2, "colorIndex": "accent-3"},
@@ -7,6 +8,18 @@ exports.totalExperience = [
 ];
 
 exports.experienceDescription = [{
+  "title": "Zalando Berlin",
+  "description": [
+    "Automation / Monitoring of production training pipelines using AWS Sagemaker and Step" +
+    " functions.",
+    "Article Sales forecasting modelling developments.",
+    "Built a Spark data pipeline processing 100 gb of data weekly for generating the" +
+    " training data needed for modelling Article Sales forecasting.",
+  ],
+  "started_at": "June 2018",
+  "ended_at": "Current",
+  "role": "Applied Scientist"
+}, {
   "title": "Racetrack.ai",
   "description": [
     "Built ML / NLP based support ticket classification engines for Customer Service Bots.",
@@ -15,7 +28,7 @@ exports.experienceDescription = [{
     "Improved performance of servers by 8X which were backing ML Models and the Chatbot server."
   ],
   "started_at": "March 2017",
-  "ended_at": "Current",
+  "ended_at": "March 2018",
   "role": "R & D Scientist"
 }, {
   "title": "Jnaapti",
