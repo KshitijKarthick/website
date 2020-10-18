@@ -26,6 +26,9 @@ export default class AboutSection extends Component {
       this.setState({activeWorkExperience: index});
     }
   }
+  getTotalExperience() {
+    return this.state.workExperience.map(_ => _['value']).reduce((a, b) => a + b);
+  }
   getParagraphs(data) {
     return data.map((article, index) => {
       return (
@@ -72,8 +75,8 @@ export default class AboutSection extends Component {
                   this.state.activeWorkExperience
                 ].value}
                 units="Months"
-                label="Total: 29" />}
-                max={29}
+                label={"Years: " + this.getTotalExperience() / 12.0} />}
+                max={this.getTotalExperience()}
                 onActive={this.setActiveWorkExperience.bind(this)} />
                 <Value size="small" value={this.state.workExperience[
                   this.state.activeWorkExperience
