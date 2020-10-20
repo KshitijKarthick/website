@@ -61,9 +61,9 @@ export default class AboutSection extends Component {
               label="My Work Experience"
               heading="Time spent in Class vs Server Room at University?">
                 <Box pad={{between: 'small'}}>
-                  <Paragraph size="large">I had over a year of experience by the time I was done with my Bachelors of Engineering working at Two Startups and a Research Institute.</Paragraph>
-                  <Paragraph size="large">The learning I had was tremendous both in terms of technical & non technical aspects in the Industry.</Paragraph>
-                  <Paragraph size="large">Toiled the rest of the hours either in the server room at my Univeristy or interning at Startups.</Paragraph>
+                  <Paragraph size="large">I have over 4 years of professional experience working in Bengaluru and Berlin.</Paragraph>
+                  <Paragraph size="large">Gained professional work experience in a multi national company and 3 startups over my career.</Paragraph>
+                  <Paragraph size="large">Currently living in Berlin and working in Zalando SE as an Applied Scientist.</Paragraph>
                 </Box>
               </Card>
             </Tile>
@@ -75,7 +75,7 @@ export default class AboutSection extends Component {
                   this.state.activeWorkExperience
                 ].value}
                 units="Months"
-                label={"Years: " + this.getTotalExperience() / 12.0} />}
+                label={"Total: " + this.getTotalExperience() / 12.0 + " y"} />}
                 max={this.getTotalExperience()}
                 onActive={this.setActiveWorkExperience.bind(this)} />
                 <Value size="small" value={this.state.workExperience[
