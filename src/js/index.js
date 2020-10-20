@@ -30,8 +30,8 @@ class Main extends Component {
           <Menu direction="row" align="center" responsive={true}>
             <Link to="/">Home</Link>
             <Link to="/project">Projects</Link>
-            <Link to="/about">About Me</Link>
-            <Link to="/blog">Blog Articles</Link>
+            <Link to="/about">Experience</Link>
+            {/*<Link to="/blog">Blog Articles</Link>*/}
           </Menu>
         </Header>
         {this.props.children || <HomeSection />}

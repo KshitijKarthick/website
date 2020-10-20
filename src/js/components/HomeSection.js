@@ -28,34 +28,34 @@ export default class HomeSection extends Component {
             label="About Me"
             heading="Curiosity kills the cat, well everything seems fine so far.">
             <Box pad={{between: 'small'}}>
-              <Paragraph size="large">I love tinkering and building Software Applications with 20 Open Source projects and over 4 years of Professional experience.</Paragraph>
-              <Paragraph size="large">A Machine Learning / Deep Learning enthusiast with a publication and multiple projects in the field.</Paragraph>
-              <Paragraph size="large">Worked at 1 MNC, 3 startups (2 Internships, 2 Profession Work), 1 during the idea conception stage.</Paragraph>
+              <Paragraph size="large">I love tinkering and building Software Applications with multiple Open Source projects and over 4 years of Professional experience.</Paragraph>
+              <Paragraph size="large">Experienced in engineering, building and deploying Machine Learning / Deep Learning products.</Paragraph>
+              <Paragraph size="large">Worked at 1 Multi National Company and 3 Startups (1 during the idea conception stage).</Paragraph>
               <Paragraph size="large">Currently living in Berlin, working as a Applied Scientist in Zalando SE.</Paragraph>
               <Paragraph size="large">Love attending workshops, conferences and participating in Hackathons.</Paragraph>
             </Box>
           </Card>
         </Section>
+        {/*<Section pad='large'*/}
+        {/*  justify='center'*/}
+        {/*  full='vertical' colorIndex='light-2'>*/}
+        {/*    <Heading strong={false}*/}
+        {/*      uppercase={false}*/}
+        {/*      truncate={false}*/}
+        {/*      align='center'*/}
+        {/*      margin='none'>*/}
+        {/*      My Interests*/}
+        {/*    </Heading>*/}
+        {/*    <Box pad={{'horizontal': 'small', 'vertical': 'medium'}}>*/}
+        {/*      <Distribution*/}
+        {/*        series={interests.interestDistributionData}*/}
+        {/*        full={false}*/}
+        {/*        size='medium' />*/}
+        {/*    </Box>*/}
+        {/*</Section>*/}
         <Section pad='large'
           justify='center'
           full='vertical' colorIndex='light-2'>
-            <Heading strong={false}
-              uppercase={false}
-              truncate={false}
-              align='center'
-              margin='none'>
-              My Interests
-            </Heading>
-            <Box pad={{'horizontal': 'small', 'vertical': 'medium'}}>
-              <Distribution
-                series={interests.interestDistributionData}
-                full={false}
-                size='medium' />
-            </Box>
-        </Section>
-        <Section pad='large'
-          justify='center'
-          full='vertical'>
             <Heading strong={false}
               uppercase={false}
               truncate={false}
@@ -72,8 +72,7 @@ export default class HomeSection extends Component {
         </Section>
         <Section pad='large'
           justify='center'
-          full='vertical'
-          colorIndex='light-2'>
+          full='vertical' >
             <Heading strong={false}
               uppercase={false}
               truncate={false}

@@ -14,8 +14,6 @@ exports.skillsDistributionData = [
     {"label": "Pytorch", "value": 15, "colorIndex": "graph-2", "labelValue": ""},
     {"label": "Keras", "value": 10, "colorIndex": "graph-2", "labelValue": ""},
     {"label": "Scikit-Learn", "value": 10, "colorIndex": "graph-2", "labelValue": ""},
-    {"label": "Seaborn", "value": 5, "colorIndex": "graph-2", "labelValue": ""},
-    {"label": "Matplotlib", "value": 7, "colorIndex": "graph-2", "labelValue": ""},
     {"label": "CherryPy", "value": 10, "colorIndex": "graph-3", "labelValue": ""},
     {"label": "Flask", "value": 10, "colorIndex": "graph-3", "labelValue": ""},
 
@@ -25,11 +23,11 @@ exports.skillsDistributionData = [
     {"label": "React", "value": 10, "colorIndex": "graph-3", "labelValue": ""},
     {"label": "Vue", "value": 10, "colorIndex": "graph-3", "labelValue": ""},
 
-    {"label": "Scala", "value": 15, "colorIndex": "accent-2", "labelValue": ""},
-    {"label": "Java", "value": 15, "colorIndex": "accent-2", "labelValue": ""},
+    {"label": "Scala", "value": 10, "colorIndex": "accent-2", "labelValue": ""},
+    {"label": "Java", "value": 10, "colorIndex": "accent-2", "labelValue": ""},
     {"label": "Spark", "value": 15, "colorIndex": "graph-3", "labelValue": ""},
     {"label": "Docker", "value": 10, "colorIndex": "graph-3", "labelValue": ""},
-    {"label": "Kubernetes", "value": 10, "colorIndex": "graph-3", "labelValue": ""},
+    {"label": "Kubernetes", "value": 5, "colorIndex": "graph-3", "labelValue": ""},
     {"label": "MongoDB", "value": 5, "colorIndex": "graph-3", "labelValue": ""},
     {"label": "Redis", "value": 5, "colorIndex": "graph-3", "labelValue": ""}
 ];

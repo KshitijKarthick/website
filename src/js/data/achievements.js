@@ -1,5 +1,5 @@
 exports.acheivementsList = [
-  "Judged two National Level Hackathons at Reva University 2019, 2017, 2016.",
+  "Judged 3 National Level Hackathons at Reva University 2019, 2017, 2016.",
   "Completed the Digital Ocean Hacktoberfest Challenge 2017, 2016.",
   "Inter College 24hr Hackathon (Team of 5), Reva ITM 2016. (1st for UDV-Hack).",
   "National Students Project Exhibition (Team of 4), AICTE CSE 2016. (1st for T-Vecs Project).",
