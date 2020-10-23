@@ -40,6 +40,23 @@ exports.projectList = [{
   github: "https://github.com/KshitijKarthick/animewreck",
   demo: "https://animewreck.kshitij.cc"
 }, {
+  title: 'Aspect Of Arbitrage',
+  sortedId: 4,
+  description: [
+    'Built a Data Analysis tool for Path of Exile (Game) which recommends the best items to craft.',
+    'Obtains the latest in-game market prices and determines the most profitable items to craft at the current moment.',
+    'Scrapes the crafting paths from the game WIKI and the prices from POE ninja and performs the analysis'
+  ],
+  textAlign: 'left',
+  category: 'Data Science',
+  languageDistribution: [
+    {"label": "Pandas", "value": 60},
+    {"label": "Jupyter", "value": 20},
+    {"label": "Beautiful Soup", "value": 20}
+  ],
+  github: null,
+  demo: "https://projpg.kshitij.cc"
+}, {
   title: 'Grocery Image Identification',
   sortedId: 4,
   description: [
