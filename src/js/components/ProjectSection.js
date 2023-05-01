@@ -17,10 +17,12 @@ export default class ProjectSection extends Component {
     // Operations usually carried out in componentWillMount go here
     this.state = {
       projectData: projects.projectList,
-      filterCategories: new Set(R.pluck('category', projects.projectList))
+      filterCategories: new Set(R.pluck('category', projects.projectList)),
+      groupByCategory: false
     };
   }
   getSortedCategories() {
+    debugger;
     var sortCategories = R.sortWith([R.ascend(R.prop('sortedId'))]);
     var sortedCategories = R.uniq(
       R.pluck('category')(sortCategories(this.state.projectData))
@@ -62,12 +64,6 @@ export default class ProjectSection extends Component {
       </Tiles>);
   }
   getProjects() {
-    let groupByCategories = R.groupBy(R.prop('category'));
-    let sortedCategories = this.getSortedCategories();
-    let filteredCategories = sortedCategories.filter((data) => {
-      return this.state.filterCategories.has(data);
-    });
-    let categoryBasedProjects = groupByCategories(this.state.projectData);
     let getProject = ((project, index) => {
       return (
         <Project
@@ -84,14 +80,25 @@ export default class ProjectSection extends Component {
         />
       );
     });
-    let getCategoryBasedProjectList = ((category, index) => {
-      return (
-        <Section key={category}>
-          {categoryBasedProjects[category].map(getProject)}
-        </Section>
-      );
-    });
-    return filteredCategories.map(getCategoryBasedProjectList);
+  
+    if(this.state.groupByCategory === true) {
+      let groupByCategories = R.groupBy(R.prop('category'));
+      let sortedCategories = this.getSortedCategories();
+      let filteredCategories = sortedCategories.filter((data) => {
+        return this.state.filterCategories.has(data);
+      });
+      let categoryBasedProjects = groupByCategories(this.state.projectData);
+      let getCategoryBasedProjectList = ((category, index) => {
+        return (
+          <Section key={category}>
+            {categoryBasedProjects[category].map(getProject)}
+          </Section>
+        );
+      });
+      return filteredCategories.map(getCategoryBasedProjectList);
+    } else {
+      return this.state.projectData.map(getProject);
+    }
   }
   render() {
     return (
