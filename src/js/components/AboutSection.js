@@ -59,11 +59,11 @@ export default class AboutSection extends Component {
             <Tile size="large" align="start">
               <Card size="xlarge"
               label="My Work Experience"
-              heading="Time spent in Class vs Server Room at University?">
+              heading="Time spent searching in Stack Overflow professionally">
                 <Box pad={{between: 'small'}}>
-                  <Paragraph size="large">I have over 4 years of professional experience working in Bengaluru and Berlin.</Paragraph>
-                  <Paragraph size="large">Gained professional work experience in a multi national company and 3 startups over my career.</Paragraph>
-                  <Paragraph size="large">Currently living in Berlin and working in Zalando SE as an Applied Scientist.</Paragraph>
+                  <Paragraph size="large">I have over 6 years of professional experience working as a ML | Software Engineer in Bengaluru (India) and Berlin (Germany).</Paragraph>
+                  <Paragraph size="large">My work has been focused on delivering large-scale data-centric applications and productionizing Machine learning applications at scale.</Paragraph>
+                  <Paragraph size="large">Gained professional work experience in a multi-national company in Germany and 3 startups in India.</Paragraph>
                 </Box>
               </Card>
             </Tile>
@@ -75,7 +75,7 @@ export default class AboutSection extends Component {
                   this.state.activeWorkExperience
                 ].value}
                 units="Months"
-                label={"Total: " + this.getTotalExperience() / 12.0 + " y"} />}
+                label={"Total: " + Math.round( this.getTotalExperience() / 12.0 * 100 + Number.EPSILON ) / 100 + " y"} />}
                 max={this.getTotalExperience()}
                 onActive={this.setActiveWorkExperience.bind(this)} />
                 <Value size="small" value={this.state.workExperience[
