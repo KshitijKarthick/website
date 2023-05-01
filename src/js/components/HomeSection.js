@@ -28,11 +28,10 @@ export default class HomeSection extends Component {
             label="About Me"
             heading="Curiosity kills the cat, well everything seems fine so far.">
             <Box pad={{between: 'small'}}>
-              <Paragraph size="large">I love tinkering and building Software Applications with multiple Open Source projects and over 4 years of Professional experience.</Paragraph>
-              <Paragraph size="large">Experienced in engineering, building and deploying Machine Learning / Deep Learning products.</Paragraph>
-              <Paragraph size="large">Worked at 1 Multi National Company and 3 Startups (1 during the idea conception stage).</Paragraph>
-              <Paragraph size="large">Currently living in Berlin, working as a Applied Scientist in Zalando SE.</Paragraph>
-              <Paragraph size="large">Love attending workshops, conferences and participating in Hackathons.</Paragraph>
+              <Paragraph size="large">6+ years experience as an ML Engineer across companies in India and Germany, focusing</Paragraph>
+              <Paragraph size="large">on delivering large-scale data-centric applications and productionizing Machine learning</Paragraph>
+              <Paragraph size="large">applications at scale, be it building data pipelines, data versioning, automation of model</Paragraph>
+              <Paragraph size="large">training, monitoring, alerting systems, and model development.</Paragraph>
             </Box>
           </Card>
         </Section>
