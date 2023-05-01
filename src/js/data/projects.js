@@ -1,14 +1,14 @@
 exports.projectList = [{
-  title: 'ProJPG',
+  title: "ProJPG",
   sortedId: 1,
   description: [
-    'Built a UNet model which enhances anime image quality resolution.',
-    'Increases image resolution by over 100%, trained to reduce pixelation and blurr effect.',
-    'Trained on 42Gb Danbooru anime image dataset.',
-    'Client side is built using VueJs and Vuetify.'
+    "• Enhance cartoon/animated image quality and resolution using an UNet ML model.",
+    "• Trained on a 42GB image dataset to increase the image resolution by over 100% while" +
+      " reducing pixelation and blur effects.",
+    "• Technologies: Pytorch, FastAI, Python, FastAPI, Redis, VueJS, and Vuetify."
   ],
-  textAlign: 'left',
-  category: 'Deep Learning',
+  textAlign: "left",
+  category: "Deep Learning",
   languageDistribution: [
     {"label": "Pytorch", "value": 40},
     {"label": "FastAi", "value": 25},
@@ -20,16 +20,16 @@ exports.projectList = [{
   github: null,
   demo: "https://projpg.kshitij.cc"
 }, {
-  title: 'Animewreck',
+  title: "Animewreck",
   sortedId: 2,
   description: [
-    'Built a Deep Learning Anime recommendation engine personalised to the user taste.',
-    'Based on the top 10 anime ratings from the user, provides recommendations which can be' +
-    ' controlled on how genre specific should the recommendations be.',
-    'Explore the anime embedding space using 3d force graph library built over D3.'
+    "• Recommend tailor-made shows to watch based on the user's past watch history.",
+    "• Visualize and explore the embedding space to ﬁnd other similar shows represented in a 3d" +
+      " force graph.",
+    "• Technologies: Pytorch, FastAI, Python, FastAPI, Redis, VueJS, and D3.js."
   ],
-  textAlign: 'left',
-  category: 'Deep Learning',
+  textAlign: "left",
+  category: "Deep Learning",
   languageDistribution: [
     {"label": "Pytorch", "value": 50},
     {"label": "FastAi", "value": 20},
@@ -40,68 +40,16 @@ exports.projectList = [{
   github: "https://github.com/KshitijKarthick/animewreck",
   demo: "https://animewreck.kshitij.cc"
 }, {
-  title: 'Aspect Of Arbitrage',
-  sortedId: 4,
-  description: [
-    'Built a Data Analysis tool for Path of Exile (Game) which recommends the best items to craft.',
-    'Obtains the latest in-game market prices and determines the most profitable items to craft at the current moment.',
-    'Scrapes the crafting paths from the game WIKI and the prices from POE ninja and performs the analysis'
-  ],
-  textAlign: 'left',
-  category: 'Data Science',
-  languageDistribution: [
-    {"label": "Pandas", "value": 60},
-    {"label": "Jupyter", "value": 20},
-    {"label": "Beautiful Soup", "value": 20}
-  ],
-  github: null,
-  demo: "https://projpg.kshitij.cc"
-}, {
-  title: 'Grocery Image Identification',
-  sortedId: 4,
-  description: [
-    'Built a Deep Learning Model which categorizes the grocery item given the image of it with a score 90.56% accuracy.',
-    'The model was placed in the top 20 position in the leaderboard.',
-    'Hacker Earth Deep Learning Challenge (Team of 3)'
-  ],
-  textAlign: 'left',
-  category: 'Deep Learning',
-  languageDistribution: [
-    {"label": "Keras", "value": 80},
-    {"label": "Pandas", "value": 10},
-    {"label": "Numpy", "value": 5},
-    {"label": "Matplotlib", "value": 5}
-  ],
-  github: null,
-  demo: null
-}, {
-  title: 'Cats and Dogs Image Identification',
-  sortedId: 5,
-  description: [
-    'Built a Deep Learning Model which categorises if the given image is a cat or a dog.',
-    'The model scored 0.07142 log loss and over 97% accuracy',
-    'Putting the model in the top 175 position in Kaggle.'
-  ],
-  textAlign: 'left',
-  category: 'Deep Learning',
-  languageDistribution: [
-    {"label": "Keras", "value": 70},
-    {"label": "Pandas", "value": 10},
-    {"label": "Numpy", "value": 5},
-    {"label": "Matplotlib", "value": 5}
-  ],
-  github: null,
-  demo: null
-}, {
-  title: 'Measuring Semantic Relatedness Across Languages',
+  title: "Tvecs",
   sortedId: 3,
   description: [
-    'Provide capability to find semantically related words across languages in a agnostic way.',
-    'Given a word in language 1, you can find semantically related words in language 2.',
-    'The model can be used to obtain a semantic distance measure for words across languages.'
+    "• The system learns a linear transformation between multidimensional word vector spaces of" +
+      " English and Hindi without using parallel corpora.",
+    "• Generate semantically similar words across languages using Word2Vec embeddings.",
+    "• Technologies: Python, CherryPy, Nltk, Numpy, Sklearn, Scipy, Pytest, HTML, CSS, JavaScript, and SigmaJs."
   ],
-  textAlign: 'left',
-  category: 'Machine Learning',
+  textAlign: "left",
+  category: "Machine Learning",
   languageDistribution: [
     {"label": "SciKit Learn", "value": 50},
     {"label": "CherryPy", "value": 10},
@@ -111,21 +59,40 @@ exports.projectList = [{
     {"label": "HTML", "value": 15}
   ],
   commits: {
-    'mine': 294,
-    'total': 420
+    "mine": 294,
+    "total": 420
   },
-  github: 'http://github.com/kshitijkarthick/tvecs/',
-  demo: 'https://tvecs.kshitij.cc'
+  github: "http://github.com/kshitijkarthick/tvecs/",
+  demo: "https://tvecs.kshitij.cc"
 }, {
-  title: 'Urban Data Visualization',
-  sortedId: 6,
+  title: "Aspect Of Arbitrage",
+  sortedId: 4,
   description: [
-    'Hackathon project on Urban Data visualization, which provides insights & visualization on Bangalore BBMP dataset.',
-    'Developed using Leaflet, HTML, CSS, Js, Semantic-UI, Yeoman, C3.js, Git, Python, CherryPy, Openpyxl, Numpy, Sklearn.',
-    'Awarded 1st place (Team of 5).'
+    "• Built a Data Analysis tool for Path of Exile (Game) which recommends the best items to craft.",
+    "• Obtains the latest in-game market prices and determines the most profitable items to craft at the current moment.",
+    "• Scrapes the crafting paths from the game WIKI and the prices from trade website and performs the analysis"
   ],
-  textAlign: 'left',
-  category: 'Data Science',
+  textAlign: "left",
+  category: "Data Science",
+  languageDistribution: [
+    {"label": "Pandas", "value": 60},
+    {"label": "Jupyter", "value": 20},
+    {"label": "Beautiful Soup", "value": 20}
+  ],
+  github: null,
+  demo: "https://projpg.kshitij.cc"
+}, {
+  title: "Urban Data Visualization",
+  sortedId: 5,
+  description: [
+    "• Visualize Bangalore on the map while providing insights into the number of parks, public" +
+      " transportation, public toilets, and criminal cases.",
+    "• Awarded 1st place as part of a 24 hour hackathon, with a team of 5 members.",
+    "• Technologies: Leaflet, HTML, CSS, Js, Semantic-UI, Yeoman, C3.js, Git, Python, CherryPy," +
+      " Openpyxl, Numpy, and Sklearn."
+  ],
+  textAlign: "left",
+  category: "Data Science",
   languageDistribution: [
     {"label": "Python", "value": 40},
     {"label": "Javascript", "value": 30},
@@ -133,27 +100,45 @@ exports.projectList = [{
     {"label": "HTML", "value": 25}
   ],
   commits: {
-    'mine': 100,
-    'total': 150
+    "mine": 100,
+    "total": 150
   },
   github: null,
-  demo: 'https://udv.kshitij.cc'
+  demo: "https://udv.kshitij.cc"
 }, {
-  title: 'Team Arion Website for SAE-Supra',
+  title: "Grocery Image Identification",
+  sortedId: 6,
+  description: [
+    "• Developed a Deep Learning Model which categorizes the grocery item given the image of it with a score 90.56% accuracy.",
+    "• The model was placed in the top 20 position in the leaderboard.",
+    "• Hacker Earth Deep Learning Challenge (Team of 3)"
+  ],
+  textAlign: "left",
+  category: "Deep Learning",
+  languageDistribution: [
+    {"label": "Keras", "value": 80},
+    {"label": "Pandas", "value": 10},
+    {"label": "Numpy", "value": 5},
+    {"label": "Matplotlib", "value": 5}
+  ],
+  github: null,
+  demo: null
+}, {
+  title: "Team Arion Website for SAE-Supra",
   sortedId: 7,
   description: [
-    'Website design for Team Arion, formula racing team for Nitte Meenakshi Institute of Technology',
-    'The website was developed using HTML, CSS, JS, JQuery, Semantic-UI, D3.js & Git.'
+    "• Website design for Team Arion, formula racing team for Nitte Meenakshi Institute of Technology",
+    "• Technologies: HTML, CSS, JS, JQuery, Semantic-UI, and D3.js."
   ],
-  textAlign: 'left',
-  category: 'Web Development',
+  textAlign: "left",
+  category: "Web Development",
   languageDistribution: [
     {"label": "Jquery", "value": 30},
     {"label": "Javascript", "value": 20},
     {"label": "CSS", "value": 20},
     {"label": "HTML", "value": 25}
   ],
-  github: 'https://github.com/NMIT-Formula-Racing/NMIT-Formula-Racing.github.io',
-  demo: 'http://nmit-formula-racing.github.io/'
+  github: "https://github.com/NMIT-Formula-Racing/NMIT-Formula-Racing.github.io",
+  demo: "http://nmit-formula-racing.github.io/"
 }
 ];
