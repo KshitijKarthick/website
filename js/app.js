@@ -222,11 +222,11 @@ function renderChart(data) {
       datasets: [{
         data: data.expertise.map(d => d.value),
         backgroundColor: [
-          'rgba(0,255,136,0.7)', 'rgba(0,212,255,0.65)', 'rgba(0,255,136,0.45)',
-          'rgba(255,183,0,0.55)', 'rgba(0,212,255,0.4)'
+          'rgba(245,158,11,0.75)', 'rgba(251,146,60,0.75)', 'rgba(252,211,77,0.65)',
+          'rgba(52,211,153,0.65)', 'rgba(253,186,116,0.55)'
         ],
         borderColor: [
-          '#00ff88', '#00d4ff', '#00cc66', '#ffb700', '#00aacc'
+          '#f59e0b', '#fb923c', '#fcd34d', '#34d399', '#fdba74'
         ],
         borderWidth: 1,
         borderRadius: 6,
@@ -245,12 +245,12 @@ function renderChart(data) {
       scales: {
         x: {
           min: 0, max: 100,
-          grid: { color: 'rgba(0,255,136,0.06)' },
-          ticks: { color: '#334d33', callback: v => `${v}%` }
+          grid: { color: 'rgba(255,200,100,0.05)' },
+          ticks: { color: '#5c4a30', callback: v => `${v}%` }
         },
         y: {
           grid: { display: false },
-          ticks: { color: '#6b9e6b', font: { size: 12 } }
+          ticks: { color: '#a89070', font: { size: 12 } }
         }
       }
     }
