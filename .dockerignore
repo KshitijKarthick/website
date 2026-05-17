@@ -1,0 +1,22 @@
+# Git
+.git
+.gitignore
+
+# Docs
+README.md
+CLAUDE.md
+Context.md
+
+# Docker files (not needed inside image)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Logs (runtime only, not needed in image)
+server/logs/
+
+# Old legacy data files
+data/*.js
+
+# Dev notes
+*.log

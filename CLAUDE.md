@@ -63,6 +63,28 @@ Chart.js 4.x is loaded from CDN (`defer`) for the horizontal expertise bar chart
 - The `hidden` CSS class on cards is toggled by filter buttons — no re-render needed.
 - Old CommonJS `.js` data files (`data/*.js` with `exports.`) are superseded by the JSON files and can be deleted.
 
+## Docker / Deployment
+
+The site is served by **nginx:alpine** — no build step, files are copied directly into the image.
+
+```bash
+# Build and run locally via Docker
+docker compose up --build
+
+# Production deploy (assumes Traefik is running with a `web` external network)
+docker compose up -d
+```
+
+Key files:
+- `Dockerfile` — copies static files into `nginx:alpine`, installs `nginx/nginx.conf`
+- `docker-compose.yml` — Traefik labels for `kshitij.cc` with TLS via Let's Encrypt and www→apex redirect
+- `nginx/nginx.conf` — gzip, cache headers (1y for CSS/JS/assets, 1h for JSON, 7d for PDFs), security headers
+- `.dockerignore` — excludes docs, git history, and legacy `.js` data files from the image
+
+If you add new top-level directories (e.g. `fonts/`), add a corresponding `COPY` line in the Dockerfile.
+
+The `https-redirect` and `letsencrypt` certresolver are assumed to already be configured in the Traefik instance. If the middleware name differs in your Traefik setup, update the label in `docker-compose.yml`.
+
 ## Persona / Tone
 
 - Primary identity: **ML Engineering first**, Data Science second, MLOps strong suit.
