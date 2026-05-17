@@ -2,26 +2,26 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg-0: #08091a;
-  --bg-1: #0d0f20;
-  --bg-2: #12152a;
-  --bg-card: #181b30;
-  --bg-card-hover: #1e2238;
-  --border: rgba(255, 255, 255, 0.07);
-  --border-active: rgba(99, 102, 241, 0.4);
-  --accent: #6366f1;
-  --accent-glow: rgba(99, 102, 241, 0.15);
-  --accent-2: #22d3ee;
-  --accent-3: #a78bfa;
-  --accent-green: #10b981;
-  --text-1: #f1f5ff;
-  --text-2: #8b93b5;
-  --text-3: #4b5272;
+  --bg-0: #0f0b06;
+  --bg-1: #16110a;
+  --bg-2: #1c160d;
+  --bg-card: #231a0f;
+  --bg-card-hover: #2a2013;
+  --border: rgba(255, 200, 100, 0.07);
+  --border-active: rgba(245, 158, 11, 0.35);
+  --accent: #f59e0b;
+  --accent-glow: rgba(245, 158, 11, 0.12);
+  --accent-2: #fb923c;
+  --accent-3: #fcd34d;
+  --accent-green: #34d399;
+  --text-1: #fef3e2;
+  --text-2: #a89070;
+  --text-3: #5c4a30;
   --radius: 12px;
   --radius-sm: 6px;
   --radius-lg: 20px;
-  --shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
-  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --shadow: 0 4px 32px rgba(0, 0, 0, 0.6);
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.4);
   --transition: 0.2s ease;
   --max-width: 1140px;
   --nav-height: 64px;
@@ -113,7 +113,7 @@ code, .mono { font-family: "Fira Code", "Cascadia Code", monospace; }
 .nav-logo {
   font-size: 1.1rem; font-weight: 800; letter-spacing: -0.02em;
   color: var(--text-1); text-decoration: none;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 .nav-links {
@@ -136,8 +136,8 @@ code, .mono { font-family: "Fira Code", "Cascadia Code", monospace; }
 #hero {
   min-height: 100vh; display: flex; align-items: center;
   padding-top: var(--nav-height);
-  background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.12), transparent),
-              radial-gradient(ellipse 60% 40% at 80% 60%, rgba(34, 211, 238, 0.05), transparent);
+  background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(245, 158, 11, 0.1), transparent),
+              radial-gradient(ellipse 60% 40% at 80% 60%, rgba(251, 146, 60, 0.06), transparent);
 }
 .hero-content { max-width: 700px; }
 .hero-badge {
@@ -153,7 +153,7 @@ code, .mono { font-family: "Fira Code", "Cascadia Code", monospace; }
 .hero-name {
   font-size: clamp(2.8rem, 7vw, 5rem); font-weight: 800;
   letter-spacing: -0.04em; line-height: 1.05;
-  background: linear-gradient(135deg, #fff 30%, var(--accent-3));
+  background: linear-gradient(135deg, var(--text-1) 30%, var(--accent-2));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   margin-bottom: 8px;
 }
@@ -325,9 +325,9 @@ section:nth-child(even) { background: var(--bg-0); }
 .publications-conferences { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 .pub-card {
   background: var(--bg-card); border: 1px solid var(--border);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  border: 1px solid rgba(245, 158, 11, 0.2);
   border-radius: var(--radius); padding: 24px;
-  background: linear-gradient(135deg, var(--bg-card), rgba(99,102,241,0.05));
+  background: linear-gradient(135deg, var(--bg-card), rgba(245,158,11,0.05));
 }
 .pub-title { font-size: 1rem; font-weight: 700; color: var(--text-1); margin-bottom: 8px; line-height: 1.4; }
 .pub-venue { font-size: 0.8rem; color: var(--accent); margin-bottom: 6px; }
@@ -354,7 +354,7 @@ section:nth-child(even) { background: var(--bg-0); }
 /* ===== CONTACT ===== */
 #contact {
   text-align: center;
-  background: radial-gradient(ellipse 60% 60% at 50% 100%, rgba(99, 102, 241, 0.1), transparent);
+  background: radial-gradient(ellipse 60% 60% at 50% 100%, rgba(245, 158, 11, 0.08), transparent);
 }
 .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
 .contact-link {
