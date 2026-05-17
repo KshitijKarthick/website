@@ -1,0 +1,72 @@
+[
+  {
+    "title": "National Level Hackathon — Judge",
+    "org": "Reva University",
+    "years": "2023, 2019, 2017, 2016",
+    "description": "Invited as a judge for the 24-hour National Level Hackathon organised at Reva University across multiple years.",
+    "icon": "🏆"
+  },
+  {
+    "title": "ML & Data Analysis Workshop",
+    "org": "Reva University",
+    "years": "2019, 2018",
+    "description": "Conducted an ML & Data Analysis workshop for college students covering fundamentals of Machine Learning and hands-on tooling.",
+    "icon": "📊"
+  },
+  {
+    "title": "DATA+AI Summit 2024",
+    "org": "Databricks, San Francisco",
+    "years": "2024",
+    "description": "Showcased the Model Deployment Framework designed and developed at Publicis Sapient at the global DATA+AI Summit in San Francisco.",
+    "icon": "🚀"
+  },
+  {
+    "title": "Hacktoberfest Challenge",
+    "org": "Digital Ocean",
+    "years": "2017, 2016",
+    "description": "Completed the open-source Hacktoberfest challenge in consecutive years.",
+    "icon": "🌊"
+  },
+  {
+    "title": "Inter College 24hr Hackathon — 1st Place",
+    "org": "Reva ITM",
+    "years": "2016",
+    "description": "Awarded 1st place for Urban Data Visualization project with a team of 5 members.",
+    "icon": "🥇"
+  },
+  {
+    "title": "National Students Project Exhibition — 1st Place",
+    "org": "AICTE CSE",
+    "years": "2016",
+    "description": "Awarded 1st place for the T-Vecs cross-language semantic project with a team of 4.",
+    "icon": "🥇"
+  },
+  {
+    "title": "Computer Graphics Mini Project — 3rd Place",
+    "org": "Reva ITM",
+    "years": "2015",
+    "description": "Awarded 3rd place at the Computer Graphics project exhibition.",
+    "icon": "🥉"
+  },
+  {
+    "title": "Code-a-thon — 1st Place",
+    "org": "Zest Arise Department Fest",
+    "years": "2015",
+    "description": "Won 1st place in the department coding competition.",
+    "icon": "💻"
+  },
+  {
+    "title": "Code-Vita",
+    "org": "TCS",
+    "years": "2015",
+    "description": "Qualified within the top 200 teams in India.",
+    "icon": "🎯"
+  },
+  {
+    "title": "Experimental Physics — Runner-up",
+    "org": "IISc Pravega",
+    "years": "2014",
+    "description": "Placed runner-up in the Experimental Physics Contest at IISc's annual fest.",
+    "icon": "⚗️"
+  }
+]

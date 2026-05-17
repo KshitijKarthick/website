@@ -1,0 +1,50 @@
+[
+  {
+    "title": "DATA+AI Summit",
+    "org": "Databricks",
+    "date": "June 2024",
+    "location": "San Francisco, USA",
+    "role": "Presenter",
+    "description": "Showcased the Model Deployment Framework for ML at scale."
+  },
+  {
+    "title": "Semantic Data & ML DevOps",
+    "org": "Berlin Machine Learning Group",
+    "date": "June 2019",
+    "location": "Berlin, Germany",
+    "role": "Attendee",
+    "description": null
+  },
+  {
+    "title": "Machine Learning meets Fashion",
+    "org": "Zalando Tech Events Berlin",
+    "date": "December 2018",
+    "location": "Berlin, Germany",
+    "role": "Attendee",
+    "description": null
+  },
+  {
+    "title": "3rd RecSys Berlin Meetup",
+    "org": "RecSys Berlin — GetYourGuide",
+    "date": "November 2018",
+    "location": "Berlin, Germany",
+    "role": "Attendee",
+    "description": null
+  },
+  {
+    "title": "India's Tryst with Artificial Intelligence",
+    "org": "Kstart",
+    "date": "January 2017",
+    "location": "Bangalore, India",
+    "role": "Attendee",
+    "description": null
+  },
+  {
+    "title": "Functional Conference",
+    "org": "Functional Conf",
+    "date": "October 2016",
+    "location": "Bangalore, India",
+    "role": "Attendee",
+    "description": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Establishing Semantic Relationships Across Languages Using Word Vectors",
+    "venue": "IEEE — CSITSS 2016",
+    "date": "6th October 2016",
+    "doi": "10.1109/CSITSS.2016.7779382",
+    "url": "https://doi.org/10.1109/CSITSS.2016.7779382",
+    "description": "The paper presents a model that learns a linear transformation between multidimensional word vector spaces of English and Hindi without using parallel corpora, enabling cross-language semantic relatedness measurement."
+  }
+]

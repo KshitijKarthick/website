@@ -1,0 +1,20 @@
+{
+  "name": "Kshitij Karthick",
+  "title": "Lead Data Scientist",
+  "tagline": "ML Engineering · Data Science · MLOps",
+  "summary": "8+ years of experience as a Machine Learning Engineer across companies in India and Germany, focusing on delivering large-scale data-centric applications and productionizing Machine Learning at scale — building data pipelines, data versioning, automation of model training, monitoring, alerting systems, and model development.",
+  "location": "Bengaluru, Karnataka, India",
+  "email": "kshitij.karthick@gmail.com",
+  "phone": "+91-7795066036",
+  "website": "https://kshitij.cc",
+  "linkedin": "https://linkedin.com/in/kshitijkarthick",
+  "github": "https://github.com/kshitijkarthick",
+  "resume": "data/Resume_20241021.pdf",
+  "stats": [
+    { "label": "Years Experience", "value": "8+" },
+    { "label": "Companies", "value": "5+" },
+    { "label": "Open Source Projects", "value": "4+" },
+    { "label": "Countries", "value": "2" }
+  ],
+  "languages": ["English", "Kannada", "Hindi", "French"]
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "title": "LangChain with Python Bootcamp",
+    "platform": "Udemy",
+    "date": "August 2024",
+    "category": "LLMOps / GenAI"
+  },
+  {
+    "title": "Machine Learning Deep Learning Model Deployment",
+    "platform": "Udemy",
+    "date": "August 2023",
+    "category": "MLOps"
+  },
+  {
+    "title": "Essentials of MLOps with Azure: Databricks MLflow and MLflow Tracking",
+    "platform": "LinkedIn Learning",
+    "date": "July 2023",
+    "category": "MLOps"
+  },
+  {
+    "title": "Google Cloud Fundamentals",
+    "platform": "O'Reilly Media — Janani Ravi",
+    "date": "July 2023",
+    "category": "Cloud"
+  },
+  {
+    "title": "Prompt Engineering: How to Talk to the AIs",
+    "platform": "LinkedIn Learning",
+    "date": "June 2023",
+    "category": "LLMOps / GenAI"
+  },
+  {
+    "title": "Deploying LLMs: A Practical Guide to LLMOps in Production",
+    "platform": "LinkedIn Learning",
+    "date": "2023",
+    "category": "LLMOps / GenAI"
+  },
+  {
+    "title": "The Ultimate Flask Course",
+    "platform": "Packt Publication",
+    "date": "November 2022",
+    "category": "Backend"
+  },
+  {
+    "title": "Scaling Python for Big Data",
+    "platform": "O'Reilly Media",
+    "date": "October 2021",
+    "category": "Data Engineering"
+  },
+  {
+    "title": "Apache Spark with Python",
+    "platform": "James Lee",
+    "date": "March 2021",
+    "category": "Data Engineering"
+  },
+  {
+    "title": "Learning Vertex AI: MLOps with Google Cloud",
+    "platform": "LinkedIn Learning",
+    "date": "2023",
+    "category": "MLOps"
+  },
+  {
+    "title": "Learning Kubernetes",
+    "platform": "LinkedIn Learning",
+    "date": "2023",
+    "category": "MLOps"
+  },
+  {
+    "title": "Business Innovation Foundations",
+    "platform": "LinkedIn Learning",
+    "date": "2023",
+    "category": "Business"
+  },
+  {
+    "title": "Deep Learning",
+    "platform": "FastAI",
+    "date": "March 2019",
+    "category": "ML / AI"
+  },
+  {
+    "title": "Learn Scala",
+    "platform": "Zalando Tech",
+    "date": "September 2018",
+    "category": "Data Engineering"
+  },
+  {
+    "title": "Deep Learning A-Z: Hands-on Python in Data Science",
+    "platform": "Udemy",
+    "date": "September 2017",
+    "category": "ML / AI"
+  },
+  {
+    "title": "Machine Learning A-Z: Hands-on Python in Data Science",
+    "platform": "Udemy",
+    "date": "April 2017",
+    "category": "ML / AI"
+  },
+  {
+    "title": "Design and Analysis of Algorithms",
+    "platform": "Microsoft / edX",
+    "date": "2016",
+    "category": "Computer Science"
+  },
+  {
+    "title": "Web Application Architectures",
+    "platform": "Coursera",
+    "date": "2015",
+    "category": "Backend"
+  },
+  {
+    "title": "Shaping up with Angular.js",
+    "platform": "Code School",
+    "date": "2015",
+    "category": "Frontend"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "institution": "Visvesvaraya Technological University",
+    "degree": "Bachelor of Engineering (B.E) — Computer Science & Engineering",
+    "started_at": "August 2012",
+    "ended_at": "June 2016",
+    "location": "Bangalore, India"
+  },
+  {
+    "institution": "Qwen",
+    "degree": "Pre University Course — Computer Science",
+    "started_at": "2010",
+    "ended_at": "2012",
+    "location": "Bangalore, India"
+  },
+  {
+    "institution": "Daffodils English School",
+    "degree": "Secondary Education — Computer Science",
+    "started_at": "2003",
+    "ended_at": "2010",
+    "location": "Bangalore, India"
+  }
+]

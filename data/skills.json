@@ -1,0 +1,41 @@
+{
+  "categories": [
+    {
+      "name": "ML / AI",
+      "icon": "🤖",
+      "skills": ["Python", "PyTorch", "Scikit-Learn", "FastAI", "ONNX", "Hugging Face", "vllm", "LangChain", "TensorFlow", "Keras"]
+    },
+    {
+      "name": "MLOps",
+      "icon": "⚙️",
+      "skills": ["MLFlow", "Sagemaker", "Databricks", "Kubeflow", "Docker", "Kubernetes", "AWS Step Functions", "CDK"]
+    },
+    {
+      "name": "Data Engineering",
+      "icon": "🔧",
+      "skills": ["PySpark", "Pandas", "Numpy", "Scala", "Elastic Search", "Logstash", "Grafana"]
+    },
+    {
+      "name": "Backend",
+      "icon": "🖥️",
+      "skills": ["FastAPI", "Flask", "MongoDB", "Redis", "PostgreSQL", "Docker Compose"]
+    },
+    {
+      "name": "Frontend",
+      "icon": "🌐",
+      "skills": ["JavaScript", "ReactJS", "VueJS", "HTML", "CSS", "D3.js"]
+    },
+    {
+      "name": "Cloud",
+      "icon": "☁️",
+      "skills": ["AWS", "Azure", "GCP", "Databricks", "Sagemaker"]
+    }
+  ],
+  "expertise": [
+    { "label": "ML / AI", "value": 92 },
+    { "label": "MLOps", "value": 85 },
+    { "label": "Data Engineering", "value": 82 },
+    { "label": "Software Engineering", "value": 75 },
+    { "label": "Frontend / Full-Stack", "value": 55 }
+  ]
+}

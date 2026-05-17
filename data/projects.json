@@ -1,0 +1,58 @@
+[
+  {
+    "title": "ProJPG",
+    "sortedId": 1,
+    "category": "Deep Learning",
+    "started_at": "May 2020",
+    "ended_at": "October 2020",
+    "description": [
+      "Enhance cartoon/animated image quality and resolution using a UNet ML model.",
+      "Trained on a 42GB image dataset to increase image resolution by over 100% while reducing pixelation and blur effects."
+    ],
+    "technologies": ["PyTorch", "FastAI", "FastAPI", "Redis", "VueJS", "Vuetify", "Python"],
+    "github": null,
+    "demo": "https://projpg.kshitij.cc/"
+  },
+  {
+    "title": "Animewreck",
+    "sortedId": 2,
+    "category": "Deep Learning",
+    "started_at": "February 2019",
+    "ended_at": "May 2021",
+    "description": [
+      "Recommendation engine that suggests tailor-made anime shows based on a user's past watch history.",
+      "Visualise and explore the embedding space to find similar shows, represented as a 3D force graph."
+    ],
+    "technologies": ["PyTorch", "FastAI", "FastAPI", "Redis", "VueJS", "D3.js", "Python"],
+    "github": "https://github.com/KshitijKarthick/animewreck",
+    "demo": "https://animewreck.kshitij.cc/"
+  },
+  {
+    "title": "Urban Data Visualization",
+    "sortedId": 3,
+    "category": "Data Science",
+    "started_at": "May 2016",
+    "ended_at": "June 2016",
+    "description": [
+      "Visualise Bangalore on a map with insights on parks, public transportation, public toilets, and criminal cases.",
+      "Awarded 1st place at a 24-hour hackathon with a team of 5 members."
+    ],
+    "technologies": ["Leaflet", "Python", "CherryPy", "C3.js", "Scikit-Learn", "Numpy", "HTML", "CSS", "JavaScript"],
+    "github": null,
+    "demo": "https://udv.kshitij.cc/"
+  },
+  {
+    "title": "T-Vecs",
+    "sortedId": 4,
+    "category": "Machine Learning",
+    "started_at": "February 2016",
+    "ended_at": "June 2016",
+    "description": [
+      "Learns a linear transformation between multidimensional word vector spaces of English and Hindi without using parallel corpora.",
+      "Generates semantically similar words across languages using Word2Vec embeddings."
+    ],
+    "technologies": ["Python", "CherryPy", "Nltk", "Numpy", "Scikit-Learn", "Scipy", "Pytest", "SigmaJs", "HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/kshitijkarthick/tvecs/",
+    "demo": "https://tvecs.kshitij.cc/"
+  }
+]
