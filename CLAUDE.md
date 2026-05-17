@@ -23,6 +23,7 @@ No build step, no bundler, no dependencies to install.
 
 ```
 index.html          # Static HTML shell — sections are empty divs populated by JS
+                    # CSS/JS refs use ?v=__BUILD__ placeholder, substituted at Docker build time
 css/styles.css      # All styles: CSS custom properties, responsive grid/flex, animations
 js/app.js           # Fetches all JSON in parallel, renders every section, sets up chart + nav
 data/
@@ -35,6 +36,13 @@ data/
   conferences.json  # Conferences attended or presented at
   publications.json # Research papers with DOI
   education.json    # Academic history
+assets/
+  favicon.svg       # Amber "K" monogram on dark background, matches warm dark theme
+  *.png             # Optional project screenshots (referenced from projects.json image field)
+server/
+  nginx.conf        # Full nginx config (mounted as volume at runtime)
+  logs/             # nginx access + error logs (volume-mounted, persists outside container)
+deploy.sh           # Production deploy script — auto-detects docker compose vs docker-compose
 ```
 
 Chart.js 4.x is loaded from CDN (`defer`) for the horizontal expertise bar chart in the Skills section.
@@ -58,32 +66,61 @@ Chart.js 4.x is loaded from CDN (`defer`) for the horizontal expertise bar chart
 
 - **Vanilla JS only** — no React/Vue/build tools; keeps initial load fast and maintenance simple.
 - **CSS custom properties** (`--accent`, `--bg-card`, etc.) in `:root` — change the entire color scheme from one place in `styles.css`.
+- **Warm Dark theme** — amber/orange accent (`#f59e0b`) on near-black brown (`#0f0b06`). Four themes were explored: Warm Dark (chosen), Glassmorphism, Terminal/Monospace, and the original light theme.
 - **IntersectionObserver** for scroll-triggered fade-ins; `defer` on all scripts; fonts use `display=swap`.
 - **Category filter buttons** on Projects and Courses sections are auto-generated from the data — add a new `category` value in JSON and a filter button appears automatically.
 - The `hidden` CSS class on cards is toggled by filter buttons — no re-render needed.
-- Old CommonJS `.js` data files (`data/*.js` with `exports.`) are superseded by the JSON files and can be deleted.
+- `* { min-width: 0; }` globally prevents flex/grid children from overflowing on mobile.
+- Project cards support an optional `image` field — if present, renders a screenshot above the card body.
 
 ## Docker / Deployment
 
-The site is served by **nginx:alpine** — no build step, files are copied directly into the image.
+The site is served by **nginx:alpine** — no build step, files are copied directly into the image. The Docker build stamps a git short hash into the CSS/JS URLs for Cloudflare cache busting.
+
+### Deploy to production
 
 ```bash
-# Build and run locally via Docker
-docker compose up --build
-
-# Production deploy (assumes Traefik is running with a `web` external network)
-docker compose up -d
+./deploy.sh
 ```
 
-Key files:
-- `Dockerfile` — copies static files into `nginx:alpine`, installs `nginx/nginx.conf`
-- `docker-compose.yml` — Traefik labels for `kshitij.cc` with TLS via Let's Encrypt and www→apex redirect
-- `nginx/nginx.conf` — gzip, cache headers (1y for CSS/JS/assets, 1h for JSON, 7d for PDFs), security headers
-- `.dockerignore` — excludes docs, git history, and legacy `.js` data files from the image
+`deploy.sh` auto-detects whether the server has `docker compose` (v2 plugin) or `docker-compose` (v1 standalone) and uses whichever is available. It:
+1. Computes the current git short hash as the build version
+2. Passes it to `docker compose build --build-arg BUILD_VERSION=<hash>`
+3. The Dockerfile runs `sed` to replace `?v=__BUILD__` in `index.html` with the real hash
+4. Restarts the container with `--force-recreate`
+
+### File sync (without full rebuild)
+
+Use `rsync` to push only changed files:
+
+```bash
+rsync -avz --checksum ./ user@host:/path/to/portfolio/
+```
+
+### Caching strategy
+
+| Asset type | Cache-Control | Rationale |
+|---|---|---|
+| CSS / JS | `public, immutable, 1y` | URL includes `?v=<hash>` — new deploy = new URL |
+| JSON data | `public, must-revalidate, 1h` | Content updates without deploy |
+| Images / fonts | `public, immutable, 1y` | Filenames are stable |
+| PDF | `public, 7d` | Resume changes infrequently |
+| HTML | `no-cache, no-store` | Must always be fresh so new asset hashes are picked up |
+
+nginx serves HTML via `location /` with explicit no-cache headers. Cloudflare sits in front — recommend adding a **Cache Rule** in the Cloudflare dashboard to bypass cache for the root path (`/`) and `/*.html` as a belt-and-suspenders measure.
+
+### Key infra files
+
+- `Dockerfile` — copies static files into `nginx:alpine`; substitutes `__BUILD__` version at build time
+- `docker-compose.yml` — Traefik labels for `kshitij.cc` and `kshitijkarthick.me` with TLS via Let's Encrypt
+- `server/nginx.conf` — gzip, cache headers, security headers; volume-mounted at runtime
+- `.dockerignore` — excludes docs, git history, and legacy files from the image
 
 If you add new top-level directories (e.g. `fonts/`), add a corresponding `COPY` line in the Dockerfile.
 
-The `https-redirect` and `letsencrypt` certresolver are assumed to already be configured in the Traefik instance. If the middleware name differs in your Traefik setup, update the label in `docker-compose.yml`.
+The certresolver is named `myresolver` in Traefik. If that differs in your setup, update the label in `docker-compose.yml`.
+
+**Remove `ports: - "8000:80"` from `docker-compose.yml` before going to production** — that line was added for local testing and should not be exposed in prod (Traefik handles routing).
 
 ## Persona / Tone
 
