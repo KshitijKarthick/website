@@ -51,15 +51,15 @@ function renderHero(p) {
         <div class="hero-links">
           ${heroLink(githubIcon(), p.github, 'GitHub')}
           ${heroLink(linkedinIcon(), p.linkedin, 'LinkedIn')}
-          ${heroLink(emailIcon(), `mailto:${p.email}`, p.email)}
+          ${heroLink(emailIcon(), `mailto:${p.email}`, p.email, 'email-link')}
           ${p.website ? heroLink(webIcon(), p.website, 'kshitij.cc') : ''}
         </div>
       </div>
     </div>`;
 }
 
-function heroLink(icon, href, label) {
-  return `<a href="${esc(href)}" class="hero-link" target="_blank" rel="noopener">${icon} ${esc(label)}</a>`;
+function heroLink(icon, href, label, cls = '') {
+  return `<a href="${esc(href)}" class="hero-link ${cls}" target="_blank" rel="noopener">${icon} ${esc(label)}</a>`;
 }
 
 function renderExperience(list) {
@@ -200,7 +200,7 @@ function renderPublicationsConferences(pubs, confs) {
 
 function renderContact(p) {
   document.getElementById('contact-links').innerHTML = [
-    { icon: emailIcon(), href: `mailto:${p.email}`, label: p.email },
+    { icon: emailIcon(), href: `mailto:${p.email}`, label: p.email, cls: 'email-link' },
     { icon: linkedinIcon(), href: p.linkedin, label: 'LinkedIn' },
     { icon: githubIcon(), href: p.github, label: 'GitHub' },
     { icon: webIcon(), href: p.website, label: 'kshitij.cc' },
