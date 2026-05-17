@@ -243,6 +243,15 @@ section:nth-child(even) { background: var(--bg-0); }
 }
 .project-card:hover { border-color: var(--border-active); transform: translateY(-4px); box-shadow: var(--shadow); }
 .project-card.hidden { display: none; }
+.project-img {
+  width: calc(100% + 48px); margin: -24px -24px 16px;
+  height: 180px; object-fit: cover; object-position: top;
+  border-radius: var(--radius) var(--radius) 0 0;
+  border-bottom: 1px solid var(--border);
+  display: block;
+  transition: opacity var(--transition);
+}
+.project-card:hover .project-img { opacity: 0.9; }
 .project-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
 .project-name { font-size: 1.05rem; font-weight: 700; color: var(--text-1); }
 .project-date { font-size: 0.75rem; color: var(--text-3); white-space: nowrap; }

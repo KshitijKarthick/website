@@ -10,6 +10,7 @@
       "Trained on a 42GB image dataset to increase image resolution by over 100% while reducing pixelation and blur effects."
     ],
     "technologies": ["PyTorch", "FastAI", "FastAPI", "Redis", "VueJS", "Vuetify", "Python"],
+    "image": "assets/projpg.png",
     "github": null,
     "demo": "https://projpg.kshitij.cc/"
   },
@@ -24,6 +25,7 @@
       "Visualise and explore the embedding space to find similar shows, represented as a 3D force graph."
     ],
     "technologies": ["PyTorch", "FastAI", "FastAPI", "Redis", "VueJS", "D3.js", "Python"],
+    "image": "assets/animewreck.png",
     "github": "https://github.com/KshitijKarthick/animewreck",
     "demo": "https://animewreck.kshitij.cc/"
   },
@@ -38,6 +40,7 @@
       "Awarded 1st place at a 24-hour hackathon with a team of 5 members."
     ],
     "technologies": ["Leaflet", "Python", "CherryPy", "C3.js", "Scikit-Learn", "Numpy", "HTML", "CSS", "JavaScript"],
+    "image": "assets/udv.png",
     "github": null,
     "demo": "https://udv.kshitij.cc/"
   },
@@ -52,6 +55,7 @@
       "Generates semantically similar words across languages using Word2Vec embeddings."
     ],
     "technologies": ["Python", "CherryPy", "Nltk", "Numpy", "Scikit-Learn", "Scipy", "Pytest", "SigmaJs", "HTML", "CSS", "JavaScript"],
+    "image": "assets/tvecs.png",
     "github": "https://github.com/kshitijkarthick/tvecs/",
     "demo": "https://tvecs.kshitij.cc/"
   }

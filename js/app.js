@@ -100,6 +100,7 @@ function renderProjects(list) {
 
   document.getElementById('projects-grid').innerHTML = list.map(p => `
     <div class="project-card fade-in" data-category="${esc(p.category)}">
+      ${p.image ? `<img class="project-img" src="${esc(p.image)}" alt="${esc(p.title)} screenshot" loading="lazy">` : ''}
       <div class="project-header">
         <span class="project-name">${esc(p.title)}</span>
         <span class="project-date">${esc(p.started_at)}${p.ended_at !== p.started_at ? ' – ' + esc(p.ended_at) : ''}</span>
