@@ -305,12 +305,14 @@ async function init() {
     renderPublicationsConferences(data.publications, data.conferences);
     renderContact(data.profile);
 
-    // Chart renders after Chart.js script loads
-    const chartScript = document.getElementById('chartjs-script');
-    if (chartScript) {
-      chartScript.addEventListener('load', () => renderChart(data.skills));
-    } else {
+    // Both scripts are deferred, so Chart.js always runs before app.js —
+    // by the time we reach here Chart is already defined.
+    if (typeof Chart !== 'undefined') {
       renderChart(data.skills);
+    } else {
+      // Fallback for non-defer environments
+      const chartScript = document.getElementById('chartjs-script');
+      if (chartScript) chartScript.addEventListener('load', () => renderChart(data.skills));
     }
 
     setupNav();
