@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kshitij Karthick — Lead Data Scientist & ML Engineer with 8+ years experience in India and Germany.">
+  <meta name="author" content="Kshitij Karthick">
+  <meta property="og:title" content="Kshitij Karthick | Lead Data Scientist">
+  <meta property="og:description" content="ML Engineering · Data Science · MLOps">
+  <meta property="og:type" content="website">
+  <title>Kshitij Karthick | Lead Data Scientist</title>
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav id="nav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">KK</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="data/Resume_20241021.pdf" download class="btn btn-outline" style="font-size:0.82rem;padding:7px 16px;">Resume</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section id="hero">
+    <!-- Populated by app.js -->
+    <div class="container" style="padding-top:20px;">
+      <div class="skeleton" style="height:48px;width:60%;margin-bottom:16px;"></div>
+      <div class="skeleton" style="height:24px;width:40%;margin-bottom:24px;"></div>
+      <div class="skeleton" style="height:80px;width:80%;"></div>
+    </div>
+  </section>
+
+  <!-- ── About (anchor) ── -->
+  <section id="about" style="padding: 0; height: 0; visibility: hidden;"></section>
+
+  <!-- ── Experience ── -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="section-label">Experience</div>
+        <h2>Where I've Worked</h2>
+      </div>
+      <div class="timeline" id="experience-list">
+        <!-- Populated by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ── -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="section-label">Projects</div>
+        <h2>Open Source Work</h2>
+      </div>
+      <div class="project-filters" id="project-filters"></div>
+      <div class="projects-grid" id="projects-grid">
+        <!-- Populated by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Skills ── -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="section-label">Skills</div>
+        <h2>Technical Expertise</h2>
+      </div>
+      <div class="skills-layout">
+        <div class="skill-categories" id="skill-categories">
+          <!-- Populated by app.js -->
+        </div>
+        <div class="chart-container fade-in">
+          <div class="chart-title">Expertise by Domain</div>
+          <canvas id="expertise-chart" height="240"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Courses ── -->
+  <section id="courses">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="section-label">Learning</div>
+        <h2>Courses &amp; Certifications</h2>
+      </div>
+      <div class="courses-filters" id="courses-filters"></div>
+      <div class="courses-grid" id="courses-grid">
+        <!-- Populated by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Achievements ── -->
+  <section id="achievements">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="section-label">Recognition</div>
+        <h2>Achievements &amp; Awards</h2>
+      </div>
+      <div class="achievements-grid" id="achievements-grid">
+        <!-- Populated by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Research ── -->
+  <section id="research">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="section-label">Research</div>
+        <h2>Publications &amp; Conferences</h2>
+      </div>
+      <div class="publications-conferences">
+        <div>
+          <h3 style="margin-bottom:20px;color:var(--text-2);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;">Publications</h3>
+          <div id="publications-list"><!-- Populated by app.js --></div>
+        </div>
+        <div>
+          <h3 style="margin-bottom:20px;color:var(--text-2);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;">Conferences</h3>
+          <div id="conferences-list"><!-- Populated by app.js --></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label fade-in" style="justify-content:center;">Contact</div>
+      <h2 class="fade-in" style="text-align:center;margin-bottom:12px;">Let's Connect</h2>
+      <p class="fade-in" style="text-align:center;max-width:420px;margin:0 auto;">
+        Open to new opportunities, collaborations, and interesting conversations around ML, data, and systems.
+      </p>
+      <div class="contact-links" id="contact-links">
+        <!-- Populated by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p>Built with vanilla HTML · CSS · JS &mdash; data-driven from JSON config · &copy; <span id="year"></span> Kshitij Karthick</p>
+  </footer>
+
+  <!-- Chart.js (deferred for performance) -->
+  <script id="chartjs-script" src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
